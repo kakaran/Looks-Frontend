@@ -40,7 +40,8 @@
 
 .buttoninsta:hover{
     /* border: 1px solid #A4EBDB ; */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     background-color: transparent;
 }
 
@@ -55,7 +56,8 @@
 .buttonbook:hover
 {
     /* border: 1px solid #A4EBDB ; */
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     background-color: transparent;
 }
 
@@ -71,7 +73,7 @@
 }
 
 
-@media (max-width : 825px) 
+@media (max-width : 1050px) 
 {
     .hamburger{
         display: block;
@@ -85,7 +87,7 @@
         flex-direction: column;
         list-style: none;
         position: absolute;
-        left: 0px;
+        left: 30px;
         top: 50px;
         /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
         animation-name: example;

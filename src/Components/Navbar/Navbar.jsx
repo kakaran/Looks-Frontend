@@ -45,10 +45,10 @@ export default function Navbar() {
           </ul>
           <div className="hamburger">
           <a href="" style={{textDecoration: "none",
-        color: "#EAD0BF",padding : "0px 5px"}}>
+        color: "#572138",padding : "0px 5px"}}>
                 <BiPhoneCall/> 520.742.0040
               </a>
-              <hr style={{ width : " 1px", height:"25px", display : "inline-block",border : "none", borderLeft : "3px solid #EAD0BF" }}/>
+              <hr style={{ width : " 1px", height:"25px", display : "inline-block",border : "none", borderLeft : "3px solid #572138" }}/>
             <Hamburger
             color="#572138" rounded
               onToggle={(toggled) => {

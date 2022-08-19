@@ -1,9 +1,10 @@
-import Navbar from './Components/Navbar/Navbar';
+import React from 'react';
+import NavHome from './Components/Nav_Home/NavHome';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <NavHome/>
     </div>
   );
 }
