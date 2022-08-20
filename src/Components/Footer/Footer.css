@@ -70,8 +70,8 @@ input:focus{
     padding: 20px;
     border-radius: 30px;
     position: relative;
-    right: calc(20px + 71px);
-    top: 1px;
+    right: calc(20px + 70.8px);
+    top: 0.5px;
     border: 0px;
     margin-right: -100px;
     background-color: #A4EBDB;
@@ -89,7 +89,8 @@ input:focus{
     justify-content: center;
     padding-top: 50px ;
     padding-bottom: 20px;
-    gap : 80px
+    gap : 80px;
+    flex-wrap: wrap;
 }
 
 .aboutinfo,.impotant,.contact
@@ -179,3 +180,18 @@ input:focus{
     margin-right: 10px;
 }
 
+@media (max-width : 1255px) {
+    .aboutLinksContactContainer{
+        gap:0px;
+        padding-top: 0px;
+        padding: 0px 10px;
+    }
+    .BackgroundFlowerimage
+    {
+        display: none;
+    }
+
+    .aboutinfo > h1,.impotant > h1,.contact > h1{
+        width: auto;
+    }
+}
