@@ -1,0 +1,181 @@
+.footercontainer
+{
+    /* background-color: #252525; */
+    width :100%;
+    height: auto;
+    position: absolute;
+}
+
+.BackgroundFlowerimage{
+    background-image: url("https://themewar.com/wp/makeover/main/wp-content/uploads/2021/06/footer.png");
+    width: 100vh;
+    height: 400px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 200px;
+    /* left: 10px; */
+    background-size: contain;
+    animation: flowermove infinite 4s  ease-in-out;
+    z-index: -1;
+}
+@keyframes flowermove {
+    0%{
+        background-position-x: 0px;
+    }
+    25%{
+        background-position-x: 100px ;
+    }
+}
+
+.footernewletter
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 18px 0px;
+}
+
+.footernewletter h1{
+    color: #572138;
+    font-family: 'Playfair Display', serif;
+}
+
+.newsletterinput
+{
+    padding: 20px 0px ;
+}
+
+.newsletterinput input
+{
+    width:270px;
+    padding: 20px ;
+    border-radius: 30px ;  
+    border: 1px solid #EAD0BF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
+::placeholder
+{
+    font-family: 'Montserrat', sans-serif;   
+}
+
+.newsletterinput button
+{
+    width: 90px;
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+    right: calc(20px + 71px);
+    top: 1px;
+    border: 0px;
+    margin-right: -100px;
+    background-color: #A4EBDB;
+}
+
+.newsletterinput button:hover
+{
+    cursor: pointer;
+}
+
+.aboutLinksContactContainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px ;
+    padding-bottom: 20px;
+    gap : 80px
+}
+
+.aboutinfo,.impotant,.contact
+{
+    width: 350px;
+    height: 380px;
+}
+
+.aboutinfo > h1,.impotant > h1,.contact > h1{
+    color: #572138;
+    font-family: 'Playfair Display', serif;
+    padding: 30px 0px;    
+}
+
+.aboutinfo p{
+    color: #572138;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.aboutinfo button
+{
+    width: 190px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #A4EBDB;
+    color: #572138;
+    text-align: center;
+}
+
+.aboutinfo button:hover
+{
+    box-shadow: 10px 10px 10px #A4EBDB;
+    background-color: transparent;
+}
+
+.aboutinfo button span
+{
+    border-radius:50px ;
+    background-color: white;
+    margin-right:10px;
+    padding: 10px;
+    color: #572138;
+    font-size: 15px;
+    font-size: 900;
+}
+
+.importantlinks
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.importantlinks a
+{
+    text-decoration: none;
+    color: #572138;
+    padding: 8px 0px;
+    position: relative;
+    transition: padding 1s;
+    transition-timing-function: ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.importantlinks a:hover
+{
+    padding: 8px 30px;
+}
+
+.contactdetail
+{
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    align-items: center;
+    color: #572138;
+    padding: 10px 0px;
+}
+
+.contactlogo
+{
+    border-radius: 100px;
+    padding: 10px 13px;
+    background-color: #A4EBDB;
+    margin-right: 10px;
+}
+

@@ -21,6 +21,7 @@ export default function NavHome() {
           <button>schedule an appointment</button>
         </div>
       </div>
+      
     </>
   );
 }
