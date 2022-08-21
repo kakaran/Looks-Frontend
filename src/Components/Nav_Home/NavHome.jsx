@@ -6,10 +6,9 @@ import "./NavHome.css";
 export default function NavHome() {
   return (
     <>
-      <div className="backgroundcolor"></div>
+      <div className="backgroundcolor">
       <div className="BackgroundImage">
         <img src={image1} alt="" />
-      </div>
       <div className="navbaranddata">
         <Navbar />
         <div className="data">
@@ -21,7 +20,8 @@ export default function NavHome() {
           <button>schedule an appointment</button>
         </div>
       </div>
-      
+      </div>
+      </div>
     </>
   );
 }

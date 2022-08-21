@@ -16,3 +16,14 @@ code {
   margin: 0px;
   padding: 0px;
 }
+
+::-webkit-scrollbar
+{
+  background-color: azure;
+  width: 20px ;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EAD0BF;
+  border-radius: 20px;
+}

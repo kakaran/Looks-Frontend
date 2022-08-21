@@ -5,6 +5,7 @@ import { BsTelephone } from "react-icons/bs";
 import { BiPhoneCall } from "react-icons/bi";
 // import Hamburger from "hamburger-react";
 import { Sling as Hamburger } from 'hamburger-react'
+import image2 from "../../Images/LooksLogo.png"
 
 export default function Navbar() {
   const [menu, setmenu] = useState(false);
@@ -12,7 +13,9 @@ export default function Navbar() {
   return (
     <>
       <div className="NavbarContainer">
-        <div className="NavbarLogo">Logo</div>
+        <div>
+          <img className="NavbarLogo" src={image2} alt="" />
+        </div>
         <div className="navbarhamburgerConttainer">
           <ul className={menu ? "anchoremobile" : "anchoreTages"}>
             <li>

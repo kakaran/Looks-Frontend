@@ -10,6 +10,11 @@
     padding: 19px 30px;
 }
 
+.NavbarLogo 
+{
+    width: 150px;
+    height: 80px;
+}
 .anchoreTages 
 {
     display: flex;
