@@ -1,0 +1,107 @@
+.storiesContainer
+{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.storiesContainer h2
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #572138;
+    text-transform: uppercase;
+    font-size:  20px ;
+}
+
+.storiesContainer h1{
+    color: #572138;
+    font-size: 35px;
+    padding: 10px 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.storiesDetail_imagecontainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.storiesDetail_imagecontainer > img
+{
+    width: 350px;
+    box-shadow: -0px -10px 20px white inset;
+}
+
+.storiesDetail
+{
+    width : 400px;
+}
+
+.avtar_name
+{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px ;
+}
+
+.storiedetailcard{
+    padding: 20px 0px;
+}
+
+.storiedetailcard > p
+{
+    text-align: left;
+    color: #572138;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+}
+
+.avtar_name img
+{
+    width: 60px ;
+    border-radius: 50px;
+}
+
+.cardname
+{
+    padding: 0px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color:#572138 ;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+}
+
+.cardname p{
+    font-size: 14px;
+}
+
+.storiesDetail button
+{
+    padding: 15px 80px ;
+    border-radius: 20px;
+    background-color:#A4EBDB ;
+    color: #572138;
+    border: none;
+    margin: 20px 0px ;
+    text-transform: uppercase;
+}
+
+.storiesDetail button:hover
+{
+    box-shadow: 10px 10px 10px #A4EBDB;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+@media (max-width : 850px) {
+    
+    .storiesDetail_imagecontainer > img 
+    {
+        display: none;
+    }
+}

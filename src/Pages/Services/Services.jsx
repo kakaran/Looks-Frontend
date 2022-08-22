@@ -27,7 +27,7 @@ export default function Services() {
               are and what you're looking for, sit back, relax, and enjoy salon
               day for the first time in your life.
             </p>
-            <button>Booke Online</button>
+            <button>Book Online</button>
           </div>
           <div className="serciceCard">
             <img src={service2} alt="" />

@@ -92,11 +92,15 @@
         flex-direction: column;
         list-style: none;
         position: absolute;
-        left: 30px;
-        top: 50px;
+        left: 50px;
+        top: 90px;
         /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
         animation-name: example;
         animation-duration: 1s;
+        width: 85%;
+        border-radius: 20px;
+        text-align: center;
+        background-image:linear-gradient(120deg,white,#FCF1ED,#EAD0BF,#EAD0BF,#e8c7b1,#FCF1ED,#FCF1ED);
     }
 
     @keyframes example {
@@ -105,7 +109,7 @@
             top:35px
         }
         to{
-            top :50px
+            top :90px
         }
     }
 
@@ -117,6 +121,7 @@
     .anchoremobile li
     {
         padding: 10px 0px;
+        
     }
 
     .anchoremobile li a
