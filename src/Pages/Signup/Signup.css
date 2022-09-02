@@ -1,0 +1,81 @@
+.signup_Form_Container
+{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: center;
+    width:600px;
+    padding: 0px 50px ;
+    position: relative;
+    top: 84px;
+}
+
+.signup_Form_Container label
+{
+    color: #572138;
+    font-family: 'Playfair Display', serif;
+    padding-left: 4px ;
+}
+
+.signup_Form_Container input
+{
+    margin-bottom: 20px ;
+    padding: 15px 10px ;
+    border-radius: 5px;
+    border: 2px solid #EAD0BF;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 17px;
+    /* width: 100%; */
+}
+
+.signup_Form_Container input::placeholder
+{
+    color: #572138;
+}
+
+.signup_Form_Container h1{
+    text-align: center;
+    color: #572138;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.signup_Form_Container button{
+    padding: 10px 0px ;
+    border-radius: 5px ;
+    background-color: #EAD0BF;
+    color: #572138;
+    font-size: 20px;
+    border: none;
+}
+
+.login_redirect
+{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #572138;
+    padding: 10px 0px ;
+}
+
+.login_redirect a{
+    text-decoration: none;
+    color: #60D4D3;
+}
+
+.N-password_holder 
+{
+    display: flex;
+}
+
+.N-password_holder > input{
+    flex-basis: 100%;
+}
+
+.N-password_holder span
+{
+    position: relative;
+    right: calc(2px + 10.8px);
+    top: 13px;
+    font-size: 30px;
+    margin-left: -30px;
+    color: #572138;
+}

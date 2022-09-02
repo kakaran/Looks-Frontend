@@ -2,7 +2,6 @@ import React ,{useState}from 'react'
 import image2 from "../../Images/LooksLogo.png"
 import { AiOutlineHome, AiOutlineInstagram } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
-import { BiPhoneCall } from "react-icons/bi";
 import {Link} from "react-router-dom";
 import { Sling as Hamburger } from 'hamburger-react'
 import "./Navbar.css";
@@ -37,7 +36,7 @@ export default function Navbar() {
         <Link to="/" onClick={() =>{setActiveValue("#contact")}} className = { activevalue === "#contact" ? "active" : " " }>Contact</Link>
         <Link to="/" onClick={() =>{setActiveValue("#number")}} className = { activevalue === "#number" ? "active" : " " }><BsTelephone /> 520.742.0040</Link>
         <Link to="/" onClick={() =>{setActiveValue("#insta")}} className = { activevalue === "#insta" ? "active" : " " }><AiOutlineInstagram style={{fontSize: "22px"}}/></Link>
-        <Link to="/" className='navbar_btn'>Book Online</Link>
+        <Link to="/login" className='navbar_btn'>Login</Link>
       </div>
       </div>
 
