@@ -41,14 +41,14 @@
 .navbar_btn
 {
     border-radius: 10px ;
-    background-color: #A4EBDB;
+    background-color: transparent;
     padding: 6px 10px ;
     text-align: center;
 }
 
 .navbar_btn:hover{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    background-color: transparent;
+    background-color: #ebb39c;
 }
 
 .navbar_Hamburger
