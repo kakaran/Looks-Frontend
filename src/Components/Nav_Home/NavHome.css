@@ -21,7 +21,7 @@
 
 .BackgroundImage > img{
     width: 695px;
-    height: auto;
+    height: 641px;
     filter: brightness(100%);
     border-bottom-left-radius: 250px 300px;    
     /* opacity: 0.8; */

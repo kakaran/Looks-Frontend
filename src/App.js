@@ -1,18 +1,15 @@
 import React from 'react';
-import Footer from './Components/Footer/Footer';
-import NavHome from './Components/Nav_Home/NavHome';
-import Experience from './Pages/Experience/Experience';
-import Services from './Pages/Services/Services';
-import Stories from './Pages/Stories/Stories';
+import {BrowserRouter as Router , Routes, Route} from "react-router-dom";
+import Home from "./Pages/Home/Home.jsx";
 
 function App() {
   return (
     <div className="App">
-      <NavHome/>
-      <Services/>
-      <Stories/>
-      <Experience/>
-      <Footer/>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Experience() {
           <h2>beautifying looks</h2>
           <h1>for over 10 years</h1>
           <p>
-            We're honored to have awards presented in 2013,in First Place for
+            We're honored to have awards presented in 2015,in First Place for
             Best Hair Salon and Second Place for Best Day Spa and Staff pick for
             Best Hair Salon by The Explorer "Best of the Northwest"
           </p>
@@ -26,7 +26,7 @@ export default function Experience() {
             </div>
             <div className="infoservices">
               <h1>10+</h1>
-              <p>years in service since 1985</p>
+              <p>years in service since 2010</p>
             </div>
           </div>
           <button>Schedule an appointment</button>
