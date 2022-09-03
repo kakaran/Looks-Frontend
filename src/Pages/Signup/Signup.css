@@ -37,6 +37,8 @@
 .signup_Form_Container input::placeholder
 {
     color: #572138;
+    font-weight: lighter;
+    font-size: 15px;
 }
 
 .signup_Form_Container h1{

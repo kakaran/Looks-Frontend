@@ -5,7 +5,14 @@
     background-repeat: no-repeat;
     height: 100vh;
 }
-
+.Login_Container img
+{
+    width : 170px;
+    height: 130px;
+    display: block;
+    margin: auto;
+    margin-bottom: -120px;
+}
 .login_form_container
 {
     display: flex;
@@ -35,7 +42,9 @@
     padding: 15px 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    font-size: 16px;
     border: 1px solid #EAD0BF;
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .login_fpassword
@@ -73,4 +82,28 @@
 {
     color: #60D4D3;
     text-decoration: none;
+}
+
+/* ================================== Media Query ============================ */
+/*                               Max-Width = 1010px                           */
+/* ==========================================================================*/
+
+@media (max-width : 1010px) {
+    .login_form_container
+    {
+        width: 300px;
+    }
+}
+
+/* ================================== Media Query ============================ */
+/*                               Max-Width = 500px                            */
+/* ==========================================================================*/
+
+@media (max-width : 500px) {
+    
+    .Login_Container{
+        background-color: #FFFFFF;
+        background-image: none;
+    }
+
 }
