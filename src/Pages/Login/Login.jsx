@@ -70,7 +70,7 @@ export default function Login() {
           <div className="login_form_container">
             <h1>Welcome Back</h1>
             <label htmlFor="loginemail"> Your email</label>
-            <input type="email"  id="loginemail" placeholder='name@domail.com' onChange={(e) =>{setUserEmail(e.target.value)}}/>
+            <input type="email"  id="loginemail" placeholder='name@domain.com' onChange={(e) =>{setUserEmail(e.target.value)}}/>
             <label htmlFor="loginpassword">Password</label>
             <div className="N-password_holder">
             <input type={passwordtype} id="loginpassword" placeholder='at least 8 characters' onChange={(e) => {setPassword(e.target.value)}}/>
