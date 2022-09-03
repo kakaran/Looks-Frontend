@@ -40,20 +40,21 @@ export default function Signup() {
         progress: undefined,
         });
         console.log("hi");
-    }
+    }else{
+
 
     await axios.post("http://localhost:4001/api/Signup",user).then((response)=>{
-      toast.success(`${response.request.response}`, {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        });
-        navigate("/login");
-    }).catch((error)=>{
+        toast.success(`${response.request.response}`, {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+          navigate("/login");
+      }).catch((error)=>{
       toast.error(`${error.request.response}`, {
         position: "top-center",
         autoClose: 5000,
@@ -62,7 +63,9 @@ export default function Signup() {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        });    })
+        });    
+      });
+    }
   }
   const ChangeC_PasswordType = () =>
   {

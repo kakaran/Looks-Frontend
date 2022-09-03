@@ -3,6 +3,7 @@ import "./Footer.css";
 import { BsArrowRight, BsTelephone } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { WiTime9 } from "react-icons/wi";
+import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -37,10 +38,10 @@ export default function Footer() {
             <div className="impotant">
               <h1>Important Links</h1>
               <div className="importantlinks">
-                <a href="">Home</a>
-                <a href="">Services</a>
-                <a href="">Contact</a>
-                <a href="">About</a>
+                <Link to="">Home</Link>
+                <Link to="">Services</Link>
+                <Link to="">Contact</Link>
+                <Link to="">About</Link>
               </div>
             </div>
             <div className="contact">
