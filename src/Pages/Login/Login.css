@@ -1,4 +1,76 @@
-/* .login_bgimage
+.Login_Container
 {
-    z-index: -1;
-} */
+    background-image: url("https://img.freepik.com/free-vector/hand-drawn-flowers-background_79603-1546.jpg?size=2120&ext=jpg&ga=GA1.2.1536551684.1662122570");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login_form_container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 400px;
+    height: 100vh;
+    justify-content: center;
+    margin: auto;
+    color: #572138;
+}
+
+.login_form_container h1
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin-bottom: 7px;
+}
+
+.login_form_container label
+{
+    font-family: 'Playfair Display', serif;
+    padding-left: 2px;
+}
+
+.login_form_container input
+{
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #EAD0BF;
+}
+
+.login_fpassword
+{
+    text-decoration: none;
+    text-align: right; 
+    color: #572138;
+    padding: 10px 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.login_form_container button
+{
+    padding: 13px 0px ;
+    border-radius: 5px;
+    border: none;
+    background-color: #EAD0BF;
+    color: #572138;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.login_form_container button:hover
+{
+    background-color: transparent;
+    box-shadow: #EAD0BF 2px 2px 4px 4px, rgba(14, 30, 37, 0.32) 0px 2px 16px 4px;
+}
+
+.login_form_container p
+{
+    font-family: 'Playfair Display', serif;
+}
+
+.login_form_container p > a
+{
+    color: #60D4D3;
+    text-decoration: none;
+}

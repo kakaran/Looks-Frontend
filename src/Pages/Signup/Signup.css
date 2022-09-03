@@ -4,10 +4,16 @@
     flex-direction: column;
     float: right;
     justify-content: center;
-    width:600px;
+    width:450px;
     padding: 0px 50px ;
     position: relative;
-    top: 84px;
+    top: 50px;
+}
+
+.signup_container{
+    background-image: url("https://img.freepik.com/premium-photo/various-makeup-foundations_23-2147710630.jpg?w=2120");
+    height: 100vh;
+    background-size: cover;
 }
 
 .signup_Form_Container label
@@ -48,6 +54,13 @@
     border: none;
 }
 
+.signup_Form_Container button:hover
+{
+    background-color: transparent;
+    box-shadow: #EAD0BF 2px 2px 4px 4px, rgba(14, 30, 37, 0.32) 0px 2px 16px 4px;
+    
+}
+
 .login_redirect
 {
     text-align: center;
@@ -78,4 +91,49 @@
     font-size: 30px;
     margin-left: -30px;
     color: #572138;
+}
+
+.password_format
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #572138;
+    padding-left: 18px;
+    padding-bottom: 10px;
+}
+
+.password_format li
+{
+    list-style: none;
+}
+
+.hide{display: none;}
+
+
+/* ================================== Media Query ============================ */
+/*                               Max-Width = 1109px                           */
+/* ==========================================================================*/
+
+@media (max-width : 1190px) {
+    .signup_container
+    {
+        background-color: #E5E2E3;
+        background-image: none;
+    }
+    
+    .signup_Form_Container
+    {
+        float: none;
+        margin: auto;
+    }
+}
+/* ================================== Media Query ============================ */
+/*                               Max-Width = 550px                            */
+/* ==========================================================================*/
+
+@media (max-width : 550px ) {
+    
+    .signup_Form_Container
+    {
+        width : 300px;
+    }
 }
