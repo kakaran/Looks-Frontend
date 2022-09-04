@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router , Routes, Route} from "react-router-dom";
+import ForgetPassword from './Pages/ForgetPassword/ForgetPassword.jsx';
 import Home from "./Pages/Home/Home.jsx";
 import Login from './Pages/Login/Login.jsx';
 import Signup from './Pages/Signup/Signup.jsx';
@@ -12,6 +13,7 @@ function App() {
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/login' element={<Login/>}/>
           <Route exact path='/signup' element={<Signup/>}/>
+          <Route exact path='/resetpassword' element={<ForgetPassword/>}/>
         </Routes>
       </Router>
     </div>

@@ -48,7 +48,17 @@ export default function Login() {
         progress: undefined,
         });
     })
+  }
 
+  const handleforgetpassword = async () =>
+  {
+    console.log("click",useremail);
+      await axios.post("http://localhost:4001/api/EmailCheck",{useremail}).then((response) =>{
+        console.log("run3");
+        alert(response.request.response)
+      }).catch((error) =>{
+        alert(error.request.response)
+      })
   }
 
   const ChangePasswordType = () =>
@@ -76,7 +86,7 @@ export default function Login() {
             <input type={passwordtype} id="loginpassword" placeholder='at least 8 characters' onChange={(e) => {setPassword(e.target.value)}}/>
             <span onClick={() =>{ChangePasswordType()}}>{passwordeye}</span>
             </div>
-            <Link className='login_fpassword' to=""><small>Forgot password?</small></Link>
+            <p className='login_fpassword'onClick={() =>{handleforgetpassword()}}><small>Forgot password?</small></p>
             <button onClick={() =>{handleLogin()}}>Login</button>
             <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
           </div>

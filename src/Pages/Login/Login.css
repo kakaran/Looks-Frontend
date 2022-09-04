@@ -54,6 +54,7 @@
     color: #572138;
     padding: 10px 0px;
     font-family: 'Playfair Display', serif;
+    cursor: pointer;
 }
 
 .login_form_container button

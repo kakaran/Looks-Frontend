@@ -13,12 +13,12 @@ export default function Signup() {
   const [c_passwordtype, setC_PasswordType] = useState("password");
   const [passwordeye, setPasswordEye] = useState(<AiOutlineEyeInvisible/>);
   const [c_passwordeye, setC_PasswordEye] = useState(<AiOutlineEyeInvisible/>);
-  const [checkvalue ,setCheckValue] = useState(false);
-  const [name , setName] = useState();
-  const [useremail , setUserEmail] =useState();
-  const [password , setPassword] =useState();
-  const [confirmPassword , setConfirmPassword] =useState();
-  const [ishovering , setHovering] = useState(false);
+  const [checkvalue, setCheckValue] = useState(false);
+  const [name, setName] = useState();
+  const [useremail, setUserEmail] =useState();
+  const [password, setPassword] =useState();
+  const [confirmPassword, setConfirmPassword] =useState();
+  const [ishovering, setHovering] = useState(false);
   const navigate = useNavigate();
 
   const handleSignup =  async () => {
