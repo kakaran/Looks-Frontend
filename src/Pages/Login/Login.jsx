@@ -52,13 +52,30 @@ export default function Login() {
 
   const handleforgetpassword = async () =>
   {
-    console.log("click",useremail);
-      await axios.post("http://localhost:4001/api/EmailCheck",{useremail}).then((response) =>{
-        console.log("run3");
-        alert(response.request.response)
+       await axios.post("http://localhost:4001/api/EmailCheck",{useremail}).then((response) =>{
+        toast.success(`${response.request.response}`, {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });        setTimeout(() => {
+          navigate("/resetpassword/" + useremail)
+        }, 3000);
       }).catch((error) =>{
-        alert(error.request.response)
-      })
+        toast.error(`${error.request.response}`, {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });     
+         })
+
   }
 
   const ChangePasswordType = () =>
