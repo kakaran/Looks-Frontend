@@ -3,6 +3,7 @@ import {BrowserRouter as Router , Routes, Route} from "react-router-dom";
 import ForgetPassword from './Pages/ForgetPassword/ForgetPassword.jsx';
 import Home from "./Pages/Home/Home.jsx";
 import Login from './Pages/Login/Login.jsx';
+import Service_Page from './Pages/Services/Service_Page/Service_Page.jsx';
 import Signup from './Pages/Signup/Signup.jsx';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/login' element={<Login/>}/>
           <Route exact path='/signup' element={<Signup/>}/>
+          <Route exact path='/services' element={<Service_Page/>}/>
           <Route exact path="/resetpassword/:useremail" element={<ForgetPassword/>}/>
         </Routes>
       </Router>

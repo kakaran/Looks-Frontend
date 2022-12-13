@@ -1,0 +1,65 @@
+.Services_PageContainer h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    color: #572138;
+    padding: 50px 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.Services_PageContainer h3{
+    font-size: 25px ;
+    text-transform: uppercase;
+    color: #572138;
+    font-family: 'PT Sans', sans-serif;
+    padding-left:60px ;
+}
+
+
+.packages_Container
+{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Package_Card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px ;
+}
+
+
+.Package_Card img{
+    border-radius: 10px 10px 0px 0px;
+    /* border: 1px solid black; */
+    width: 300px;
+    height: 240px;
+}
+
+.Package_Card p{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.Package_Card button{
+    width: 100px;
+    padding: 8px;
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    color: #572138;
+    border-radius: 20px;
+    border: none;
+    margin: auto;
+    background-color: #a5ebdb;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.Package_Card button:active{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    color: #fff;
+    /* background-color: #fff;
+    color: #a5ebdb; */
+}
