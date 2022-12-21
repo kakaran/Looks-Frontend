@@ -96,16 +96,16 @@ export default function Signup() {
             <div className="signup_Form_Container">
               <h1>Sign up with email</h1>
                 <label htmlFor="name"><small>Name</small></label>
-                <input type="text"  id='name' placeholder='Enter Full Name' onChange={(e) =>{
+                <input type="text"  id='name' placeholder='Enter Full Name' autoComplete='off' onChange={(e) =>{
                   setName(e.target.value)
                 }}/>
                 <label htmlFor="email"><small>Email Address</small></label>
-                <input type="email"  id='email' placeholder='Enter the email' onChange={(e) =>{
+                <input type="email"  id='email' placeholder='Enter the email' autoComplete='off' onChange={(e) =>{
                   setUserEmail(e.target.value)
                 }}/>
                 <label htmlFor="password"><small>New Password</small></label>
                 <div className="N-password_holder">
-                <input type={c_passwordtype}  id='password' placeholder='Enter Password' onMouseEnter={() =>{setHovering(true)}} onMouseLeave={() =>{setHovering(false)}} onChange={(e) =>{
+                <input type={c_passwordtype}  id='password' placeholder='Enter Password'  autoComplete='off' onMouseEnter={() =>{setHovering(true)}} onMouseLeave={() =>{setHovering(false)}} onChange={(e) =>{
                   setPassword(e.target.value)
                 }}/>
                 <span onClick={() =>{ChangeC_PasswordType()}}>{c_passwordeye}</span>
@@ -120,7 +120,7 @@ export default function Signup() {
                 </div>
                 <label htmlFor="c-password"><small>New Confirm Password</small></label>
                 <div className="N-password_holder">
-                <input type={passwordtype}  id="c-password"  placeholder='Enter the Confirm Password ' onChange={(e) =>{
+                <input type={passwordtype}  id="c-password"  placeholder='Enter the Confirm Password '  autoComplete='off' onChange={(e) =>{
                   setConfirmPassword(e.target.value)
                 }}/>
                 <span onClick={() =>{ChangePasswordType()}}>{passwordeye}</span>
