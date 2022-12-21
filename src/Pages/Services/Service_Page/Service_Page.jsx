@@ -8,11 +8,8 @@ import { useEffect, useState } from "react";
 const Service_Page = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    axios.defaults.headers = {
-      auth: localStorage.getItem("token"),
-    };
     const loadpackages = async () => {
-        await axios.get("http://192.168.0.191:4001/product/products",{}).then((response) =>{
+        await axios.get("http://192.168.0.191:4001/services/services",{}).then((response) =>{
             console.log(response.data);
             setProduct(response.data)
         }).catch((err) =>{
@@ -35,7 +32,7 @@ const Service_Page = () => {
               return (
               <div className="Package_Card">
                 <img src={`http://192.168.0.191:4001${prod.image}`} alt="" />
-                <p>{prod.productname}</p>
+                <p>{prod.Servicename}</p>
                 <p>{prod.information}</p>
                 <p>{prod.cost}.Rs</p>
                 <button>Buy Now</button>
