@@ -7,45 +7,41 @@ import Footer from "../../Components/Footer/Footer";
 
 const Product = () => {
 
-  const [product, setProduct] = useState([]);
+  const [productdata, setProductdata] = useState([]);
   const [selproduct,setSelproduct] = useState([]);
-  const [statemanage,setStatemanage] = useState(product);
+  const [statemanage,setStatemanage] = useState(productdata);
   let categories = ["eye", "face", "body"];
   let selectedProducts = [];
 
   //-----API Calling-----//
-  useEffect(() => {
-    const productload = async () => {
-    //   await axios.get("http://localhost:4001/product/products",{}).then((response) => {
-    //       setProduct(response.data);
-    //     }).catch((err) => {
-    //       console.log(err);
-    //     });
-    // };
+  useEffect(() =>{
+    const productload = async () =>{
     try {
-      let data =  (await axios.get("http://localhost:4001/product/products",{})).data;
-      setProduct(data);
-      console.log(data);
+        const data = (await axios.get("http://localhost:4001/product/products")).data
+        setProductdata(data);
+        // await setStatemanage(productdata)
     } catch (error) {
       console.log(error);
     }
+    }
     productload();
-    console.log(product);
-  };
-  }, []);
+  },[])
 
   //----------Data Select of Category -----//
   const selectivedata = (cate) => {
     selectedProducts.splice(0,selectedProducts.length);
-    product.forEach((value) => {
+    productdata.forEach(async (value) => {
       if(value.category == cate) {
-        selectedProducts.push(value);
+         await selectedProducts.push(value);
          setSelproduct(selectedProducts);
         }
       }); 
       // console.log(selectedProducts);
       // console.log(selproduct);
   };
+  console.log(selproduct);
+
+
 
   return (
     <>
@@ -58,11 +54,11 @@ const Product = () => {
           <ul>
             <li
             onClick={() =>{
-              setStatemanage(product)
+              // setStatemanage(productdata)
             }}>All Products</li>
             <li
               onClick={() => {
-                setStatemanage(selproduct)
+                // setStatemanage(selproduct)
                 selectivedata(categories[0]);
               }}
             >
@@ -70,7 +66,7 @@ const Product = () => {
             </li>
             <li
               onClick={() => {
-                setStatemanage(selproduct)
+                // setStatemanage(selproduct)
                 selectivedata(categories[1]);
               }}
             >
@@ -78,7 +74,7 @@ const Product = () => {
             </li>
             <li
               onClick={() => {
-                setStatemanage(selproduct)
+                // setStatemanage(selproduct)
                 selectivedata(categories[2]);
               }}
             >
@@ -89,7 +85,7 @@ const Product = () => {
         <div className="products_Card_Container">
         {statemanage.map((value,key) =>{
           return(
-            <div className="Card">
+            <div className="Card" key={key}>
             <div className="Card_Image">
               <img src={`http://localhost:4001${value.image}`}alt="product" />
             </div>
