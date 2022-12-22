@@ -7,12 +7,11 @@ import "./Service_Page.css";
 import { useEffect, useState } from "react";
 
 const Service_Page = () => {
-  const [product, setProduct] = useState([]);
+  const [service, setService] = useState([]);
   useEffect(() => {
     const loadpackages = async () => {
-        await axios.get("http://localhost:4001/services/services",{}).then((response) =>{
-            console.log(response.data);
-            setProduct(response.data)
+        await axios.get("http://localhost:4001/service/services",{}).then((response) =>{
+          setService(response.data)
         }).catch((err) =>{
             console.log(err);
         })
@@ -28,8 +27,7 @@ const Service_Page = () => {
         <h1>Services</h1>
         <h3>Packages</h3>
         <div className="packages_Container">
-          {product.map((prod) => {
-              console.log(prod.cost)
+          {service.map((prod) => {
               return (
               <div className="Package_Card">
                 <img src={`http://localhost:4001${prod.image}`} alt="" />
