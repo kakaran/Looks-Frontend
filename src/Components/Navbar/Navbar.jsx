@@ -34,7 +34,7 @@ export default function Navbar() {
           <Link to="/" onClick={() => { setActiveValue("#about") }} className={activevalue === "#about" ? "active" : " "}>About</Link>
           <Link to="/services" onClick={() => { setActiveValue("#services") }} className={activevalue === "#services" ? "active" : " "}>Services</Link>
           <Link to="/" onClick={() => { setActiveValue("#contact") }} className={activevalue === "#contact" ? "active" : " "}>Contact</Link>
-          <Link to="/product" onClick={() => { setActiveValue("#number") }} className={activevalue === "#number" ? "active" : " "}><BsTelephone /> 520.742.0040</Link>
+          <Link to="/product" onClick={() => { setActiveValue("#product") }} className={activevalue === "#product" ? "active" : " "}>Products</Link>
           <Link to="/" onClick={() => { setActiveValue("#insta") }} className={activevalue === "#insta" ? "active" : " "}><AiOutlineInstagram style={{ fontSize: "22px" }} /></Link>
           <Link to="/login" className='navbar_btn'>Login</Link>
         </div>
