@@ -8,24 +8,24 @@ import Footer from "../../Components/Footer/Footer";
 const Product = () => {
 
   const [productdata, setProductdata] = useState([]);
-  const [selproduct,setSelproduct] = useState([]);
-  const [statemanage,setStatemanage] = useState(productdata);
-  let categories = ["eye", "face", "body"];
+  const [selproduct,setSelproduct] = useState([productdata]);
+  let categories = ["eye", "face", "body",""];
   let selectedProducts = [];
 
   //-----API Calling-----//
   useEffect(() =>{
     const productload = async () =>{
-    try {
+      try {
         const data = (await axios.get("http://localhost:4001/product/products")).data
         setProductdata(data);
-        // await setStatemanage(productdata)
-    } catch (error) {
-      console.log(error);
-    }
+        setSelproduct(data);
+      } catch (error) {
+        console.log(error);
+      }
     }
     productload();
   },[])
+  
 
   //----------Data Select of Category -----//
   const selectivedata = (cate) => {
@@ -33,16 +33,15 @@ const Product = () => {
     productdata.forEach(async (value) => {
       if(value.category == cate) {
          await selectedProducts.push(value);
-         setSelproduct(selectedProducts);
+         await setSelproduct(selectedProducts);
+        }else{
+          await setSelproduct(productdata)
         }
       }); 
-      // console.log(selectedProducts);
-      // console.log(selproduct);
+        // console.log(selectedProducts);
+        // console.log(selproduct);
   };
-  console.log(selproduct);
-
-
-
+  
   return (
     <>
       <div style={{ backgroundColor: "#e9cebc", padding: "0px 25px" }}>
@@ -55,6 +54,7 @@ const Product = () => {
             <li
             onClick={() =>{
               // setStatemanage(productdata)
+              selectivedata(categories[3]);
             }}>All Products</li>
             <li
               onClick={() => {
@@ -83,7 +83,7 @@ const Product = () => {
           </ul>
         </div>
         <div className="products_Card_Container">
-        {statemanage.map((value,key) =>{
+        {selproduct.map((value,key) =>{
           return(
             <div className="Card" key={key}>
             <div className="Card_Image">
