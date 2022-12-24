@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+.SingleProContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0px;
+}
+
+.Pro_width {
+    width: 550px;
+}
+
+.Product_info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Poppins', sans-serif;
+    height: 450px;
+    text-justify: inter-word;
+}
+
+.Product_info h1 {
+    padding: 15px 0px;
+}
+
+.Product_info hr {
+    /* height: 0; */
+    border-top : 0px ;
+    border-bottom: 0.5px solid #e7e7e7;
+}
+
+.button-37 {
+  background-color: #e9cebc;
+  border: 1px solid #e9cebc;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 350px;
+  margin: auto;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+
+/* .Product_image{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} */
+
+.certified{
+  background-color: #f8f8f8;
+  height: 150px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 24px;
+  border-radius: 10px;
+}
+
+.certified h3{
+  font-size: 22px;
+  padding-bottom:20px ;
+}

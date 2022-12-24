@@ -6,7 +6,7 @@ import {BiRupee} from "react-icons/bi";
 import "./Service_Page.css";
 import { useEffect, useState } from "react";
 
-const Service_Page = () => {
+const ServicePage = () => {
   const [service, setService] = useState([]);
   useEffect(() => {
     const loadpackages = async () => {
@@ -45,4 +45,4 @@ const Service_Page = () => {
   );
 };
 
-export default Service_Page;
+export default ServicePage;

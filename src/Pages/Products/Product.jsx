@@ -3,6 +3,7 @@ import axios from "axios";
 import "./product.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Footer from "../../Components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 
 const Product = () => {
@@ -38,8 +39,6 @@ const Product = () => {
           await setSelproduct(productdata)
         }
       }); 
-        // console.log(selectedProducts);
-        // console.log(selproduct);
   };
   
   return (
@@ -53,12 +52,10 @@ const Product = () => {
           <ul>
             <li
             onClick={() =>{
-              // setStatemanage(productdata)
               selectivedata(categories[3]);
             }}>All Products</li>
             <li
               onClick={() => {
-                // setStatemanage(selproduct)
                 selectivedata(categories[0]);
               }}
             >
@@ -66,7 +63,6 @@ const Product = () => {
             </li>
             <li
               onClick={() => {
-                // setStatemanage(selproduct)
                 selectivedata(categories[1]);
               }}
             >
@@ -74,7 +70,6 @@ const Product = () => {
             </li>
             <li
               onClick={() => {
-                // setStatemanage(selproduct)
                 selectivedata(categories[2]);
               }}
             >
@@ -85,13 +80,15 @@ const Product = () => {
         <div className="products_Card_Container">
         {selproduct.map((value,key) =>{
           return(
+            <Link to={`/product/${value._id}`}>
             <div className="Card" key={key}>
             <div className="Card_Image">
               <img src={`http://localhost:4001${value.image}`}alt="product" />
             </div>
-            <p>{value.name}</p>
+            <p className="proName">{value.name}</p>
             <p>{value.miniInfo}</p>
           </div>
+            </Link>
           )
         })}
         </div>
