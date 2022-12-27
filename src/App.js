@@ -7,6 +7,7 @@ import Login from './Pages/Login/Login.jsx';
 import ServicePage from './Pages/Services/Service_Page/ServicePage.jsx';
 import Signup from './Pages/Signup/Signup.jsx';
 import SingleProduct from './Pages/Products/Single Product/SingleProduct';
+import Cart from './Pages/Cart/Cart';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/services' element={<ServicePage/>}/>
           <Route exact path='/product' element={<Product/>}/>
           <Route exact path='/product/:id' element={<SingleProduct/>}/>
+          <Route exact path='/cart' element={<Cart/>}/>
           <Route exact path="/resetpassword/:useremail" element={<ForgetPassword/>}/>
         </Routes>
       </Router>
