@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [cartdata, setCartdata] = useState([]);
+  const [deletedata, setDeletedata] = useState()
   const userid = {
     id: localStorage.getItem("userid"),
   };
-  console.log(userid);
-
+  const cartdelete = {
+    id : userid.id,
+    product : deletedata
+  }
   useEffect(() => {
     try {
       const productdataload = async () => {
@@ -25,8 +28,20 @@ const Cart = () => {
       console.log(error);
     }
   }, []);
-  console.log(cartdata);
 
+
+  const deleteproduct = async () =>{
+    try {
+      console.log(cartdelete);
+      const data = (await axios.delete(`http://localhost:4001/cart/cart`,{data : {
+        id : userid.id,
+        product : deletedata
+      }})).data;
+      console.log(data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <>
       <div style={{ backgroundColor: "#e9cebc", padding: "0px 25px" }}>
@@ -34,15 +49,19 @@ const Cart = () => {
       </div>
       <div className="cartContainer">
         <div className="shopingCart Pro_width">
-          {cartdata.map((value) => {  
+          {cartdata.map( (value,index) => {  
             return (
-              <Link to={`/product/${value.product._id}`}>
-              <div className="product">
+              <div className="product" key={index}>
                 <img src={`http://localhost:4001${value.product.image}`} alt="product" />
                 <div className="detail">
                   <div className="name">
+                <Link to={`/product/${value.product._id}`}>
                     <h3>{value.product.name}</h3>
-                    <button>X</button>
+                    </Link>
+                    <button onClick={() =>{
+                      deleteproduct();
+                      setDeletedata(value.product._id)
+                    }}>X</button>
                   </div>
                   <div className="qutPrice">
                     <p>Qty : {value.qty}</p>
@@ -50,7 +69,6 @@ const Cart = () => {
                   </div>
                 </div>
               </div>
-              </Link>
             )
           })}
         </div>
