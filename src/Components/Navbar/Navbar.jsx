@@ -31,9 +31,9 @@ export default function Navbar() {
         </div>
         <div className={menu ? "navbar_Link_Mobile_Container" : "navabar_Link_Container"}>
           <Link to="/" onClick={() => { setActiveValue("#") }} className={activevalue === "#" ? "active" : " "}><AiOutlineHome style={{ fontSize: "22px" }} /></Link>
-          <Link to="/" onClick={() => { setActiveValue("#about") }} className={activevalue === "#about" ? "active" : " "}>About</Link>
+          <Link to="/about" onClick={() => { setActiveValue("#about") }} className={activevalue === "#about" ? "active" : " "}>About</Link>
+          <Link to="/contact" onClick={() => { setActiveValue("#contact") }} className={activevalue === "#contact" ? "active" : " "}>Contact</Link>
           <Link to="/services" onClick={() => { setActiveValue("#services") }} className={activevalue === "#services" ? "active" : " "}>Services</Link>
-          <Link to="/" onClick={() => { setActiveValue("#contact") }} className={activevalue === "#contact" ? "active" : " "}>Contact</Link>
           <Link to="/product" onClick={() => { setActiveValue("#product") }} className={activevalue === "#product" ? "active" : " "}>Products</Link>
           <Link to="/cart" onClick={() => { setActiveValue("#insta") }} className={activevalue === "#insta" ? "active" : " "}><FaShoppingCart style={{ fontSize: "22px" }} /></Link>
           <Link to="/login" className='navbar_btn'>Login</Link>

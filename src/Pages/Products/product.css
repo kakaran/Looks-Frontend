@@ -3,6 +3,8 @@
     text-align: center;
     padding: 30px 0px;
     color: #572138;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
 }
 
 .bar{

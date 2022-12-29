@@ -10,6 +10,8 @@ import SingleProduct from './Pages/Products/Single Product/SingleProduct';
 import Cart from './Pages/Cart/Cart';
 import Booked from './Pages/Booking/Booked';
 import 'react-toastify/dist/ReactToastify.css';
+import Contact from './Pages/Contact/Contact';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/login' element={<Login/>}/>
           <Route exact path='/signup' element={<Signup/>}/>
+          <Route exact path='/about' element={<About/>}/>
+          <Route exact path='/contact' element={<Contact/>}/>
           <Route exact path='/services' element={<ServicePage/>}/>
           <Route exact path='/product' element={<Product/>}/>
           <Route exact path='/product/:id' element={<SingleProduct/>}/>

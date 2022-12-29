@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+.aboutContainer h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    color: #572138;
+    padding: 50px 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+.aboutUs{
+    margin: 5px;
+    padding-left: 25px;
+}
+
+.info1 , .info2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutpic img{
+    width: 500px;
+    border-radius: 50px;
+}
+
+h4, p{
+    font-family: "Montserrat";
+    color: #572138;   
+}
+
+.aboutInfo1 {
+    padding: 20px 90px;
+}
+
+.aboutInfo1 >p {
+    padding-left: 20px;
+}
+
+.aboutInfo2{
+    padding: 40px 100px;
+    padding-top: 80px;
+}
+
+.aboutInfo2> p{
+    padding-left: 20px;
+    padding-right: 70px;
+}
+
+.aboutpic2{
+    background-color: #a4ebdb;
+    margin-right: 30px;
+    width: 320px;
+    height: 290px;
+    border-radius: 150px 150px 0px 0px;
+}
+.aboutpic2 >img{
+    padding-top: 40px;
+    width: 320px;
+    height: 250px;
+}
+
+.sign{
+    background-color: #572138;
+    margin-left: 85%;
+    text-align: center;
+    width: 100px;
+    height: 45px;
+    padding-top: 25px;
+    border-radius: 40% 55% 40% 55%;
+}
