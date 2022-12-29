@@ -1,8 +1,9 @@
 import React from "react";
 import "./Services.css";
-import service1 from "../../Images/service1.png"
-import service2 from "../../Images/service2.png"
-import service3 from "../../Images/service3.png"
+import service1 from "../../Images/service1.png";
+import service2 from "../../Images/service2.png";
+import service3 from "../../Images/service3.png";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -27,7 +28,9 @@ export default function Services() {
               are and what you're looking for, sit back, relax, and enjoy salon
               day for the first time in your life.
             </p>
-            <button>Book Online</button>
+            <Link to="/services">
+              <button>Book Online</button>
+            </Link>
           </div>
           <div className="serciceCard">
             <img src={service2} alt="" />
@@ -37,7 +40,9 @@ export default function Services() {
               shop, make up and beauty spa with multiple styles. Build Your
               Beauty Easily with Looks
             </p>
-            <button>Buy Product</button>
+            <Link to="/product">
+              <button>Buy Product</button>
+            </Link>
           </div>
           <div className="serciceCard">
             <img src={service3} alt="" />
@@ -47,7 +52,9 @@ export default function Services() {
               looking spectacular for any occasion, Don't see a package for you?
               Allow us to build an experience around you
             </p>
+            <Link to="/services">
             <button>See Special Packages</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -8,6 +8,8 @@ import ServicePage from './Pages/Services/Service_Page/ServicePage.jsx';
 import Signup from './Pages/Signup/Signup.jsx';
 import SingleProduct from './Pages/Products/Single Product/SingleProduct';
 import Cart from './Pages/Cart/Cart';
+import Booked from './Pages/Booking/Booked';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
           <Route exact path='/product' element={<Product/>}/>
           <Route exact path='/product/:id' element={<SingleProduct/>}/>
           <Route exact path='/cart' element={<Cart/>}/>
+          <Route exact path='/Booking' element={<Booked/>}/>
           <Route exact path="/resetpassword/:useremail" element={<ForgetPassword/>}/>
         </Routes>
       </Router>

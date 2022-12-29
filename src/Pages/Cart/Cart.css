@@ -7,13 +7,13 @@
 }
 
 .Pro_width {
-    width: 550px;
 }
 
 .shopingCart {
     /* border: 1px solid black; */
     overflow: auto;
     scroll-behavior: smooth;
+    width: 720px;
 }
 
 .shopingCart::-webkit-scrollbar {
@@ -26,10 +26,13 @@
     gap: 20px;
     padding-top: 20px;
     font-family: 'Poppins', sans-serif;
+    width: 720px;
 }
+
 .product > h3{
-    width: 250px;
+    width: 350px;
 }
+
 .product button{
     height: 20px;
     border: none;
@@ -37,13 +40,13 @@
     cursor: pointer;
 }
 .product img {
-    width: 150px;
-    height: 140px;
+    width: 200px;
+    height: 180px;
     /* border: 1px solid black; */
 }
 
 .detail {
-    width: 430px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,4 +57,52 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+
+
+
+.box{
+    /* border: 1px solid black; */
+    width: 250px;
+    height: 300px;
+    margin: auto;
+    background-color: #d9f2eb;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box span {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    padding: 12px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box span p:nth-child(1){
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.box button{
+    width: 200px;
+    margin-top: 20px;
+    font-size: 17px;
+    color: #572138;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: none;
+    background-color: #e9cebc;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 10px;
+}
+
+.box button:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }

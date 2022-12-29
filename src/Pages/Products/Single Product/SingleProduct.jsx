@@ -5,6 +5,7 @@ import Footer from "../../../Components/Footer/Footer";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { BsShieldFillCheck } from "react-icons/bs";
+import { ToastContainer, toast } from 'react-toastify';
 
 const SingleProduct = () => {
   const [singleProduct, setSingleProduct] = useState({});
@@ -42,8 +43,20 @@ const SingleProduct = () => {
   //------------ Add the product in cart ------------//
   const addProductinCart = async () =>{
     try {
-      const data = (await axios.post(`http://localhost:4001/cart/cart`,{prodata})).data
-      console.log(data);
+      if(prodata.userid){
+        const data = (await axios.post(`http://localhost:4001/cart/cart`,{prodata})).data
+        console.log(data);
+      }else{
+        toast.error('Kindly Please Login !', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -74,7 +87,7 @@ const SingleProduct = () => {
           <h1>{singleProduct.name}</h1>
           <p>{singleProduct.miniInfo}</p>
           <hr />
-          <p>{singleProduct.price}</p>
+          <p>₹{singleProduct.price}</p>
           <div className="qty">
             <button
               onClick={() => {
@@ -104,6 +117,7 @@ const SingleProduct = () => {
         </div>
       </div>
       <Footer />
+      <ToastContainer/>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import image2 from "../../Images/LooksLogo.png"
-import { AiOutlineHome, AiOutlineInstagram } from "react-icons/ai";
-import { BsTelephone } from "react-icons/bs";
+import { AiOutlineHome,  } from "react-icons/ai";
+import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Sling as Hamburger } from 'hamburger-react'
 import "./Navbar.css";
@@ -35,7 +35,7 @@ export default function Navbar() {
           <Link to="/services" onClick={() => { setActiveValue("#services") }} className={activevalue === "#services" ? "active" : " "}>Services</Link>
           <Link to="/" onClick={() => { setActiveValue("#contact") }} className={activevalue === "#contact" ? "active" : " "}>Contact</Link>
           <Link to="/product" onClick={() => { setActiveValue("#product") }} className={activevalue === "#product" ? "active" : " "}>Products</Link>
-          <Link to="/" onClick={() => { setActiveValue("#insta") }} className={activevalue === "#insta" ? "active" : " "}><AiOutlineInstagram style={{ fontSize: "22px" }} /></Link>
+          <Link to="/cart" onClick={() => { setActiveValue("#insta") }} className={activevalue === "#insta" ? "active" : " "}><FaShoppingCart style={{ fontSize: "22px" }} /></Link>
           <Link to="/login" className='navbar_btn'>Login</Link>
         </div>
       </div>
