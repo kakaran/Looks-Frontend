@@ -4,6 +4,9 @@ import Navbar from "../../Components/Navbar/Navbar";
 import axios from "axios";
 import "./Cart.css";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
+
 
 const Cart = () => {
   const [cartdata, setCartdata] = useState([]);
@@ -11,15 +14,19 @@ const Cart = () => {
   const userid = {
     id: localStorage.getItem("userid"),
   };
-  const [totalprice, setTotalprice] = useState();
+  const [totalprice, setTotalprice] = useState(0);
+  const navigate =  useNavigate();
 
   useEffect(() => { 
     try {
+      axios.defaults.headers = {
+        auth: localStorage.getItem("token"),
+      };
+
        const productdataload = async () => {
         const data = (
           await axios.post("http://localhost:4001/cart/cartproduct", { userid })
           ).data;
-          console.log(data);
         setCartdata(data.detail);
         setTotalprice(data.totalvalue)
       };
@@ -44,6 +51,24 @@ const Cart = () => {
       console.log(error)
     }
   }
+
+  const cartcheck = async () =>{
+    if(totalprice === 0){
+      toast.error('Kindly Please add the product on cart !', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+        navigate("")
+      }else{
+      navigate("/Booking")
+    }
+  }
+
   return (
     <>
       <div style={{ backgroundColor: "#e9cebc", padding: "0px 25px" }}>
@@ -78,14 +103,14 @@ const Cart = () => {
             <span><p>Subtotal</p><p>₹{totalprice}</p></span>
             <span><p>Shipping Fee</p><p>₹{totalprice == 0 ? totalprice : 50}</p></span>
             <span><p>Total: </p><p>₹{totalprice == 0 ? totalprice : 50+totalprice}</p></span>
-            <Link to="/booking">
-            <button onClick={() =>{
-            }}>checkout</button>
-             </Link>
+      
+            <button onClick={cartcheck}>checkout</button>
+ 
           </div>
         </div>
       </div>
       <Footer />
+      <ToastContainer/>
     </>
   );
 };

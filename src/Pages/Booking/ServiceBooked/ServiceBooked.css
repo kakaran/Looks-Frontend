@@ -1,0 +1,38 @@
+.service_container{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0px;
+    align-items: center;
+}
+
+.service_detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.service_detail .con_option{
+    width : 300px;
+    margin: 10px;   
+}
+
+.booking_information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking_information .Inforamtion{
+    width: 351px;
+}
+
+
+.booking_information .Inforamtion h2{
+    width: 351px;
+    margin: 0px;
+    text-align: center;
+} 
+
+.serviceBooking_Detail .box button{
+    cursor: pointer;
+}

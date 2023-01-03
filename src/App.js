@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router , Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from './Pages/Products/Product';
 import ForgetPassword from './Pages/ForgetPassword/ForgetPassword.jsx';
 import Home from "./Pages/Home/Home.jsx";
@@ -12,23 +12,25 @@ import Booked from './Pages/Booking/Booked';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
+import ServiceBooked from './Pages/Booking/ServiceBooked/ServiceBooked';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/login' element={<Login/>}/>
-          <Route exact path='/signup' element={<Signup/>}/>
-          <Route exact path='/about' element={<About/>}/>
-          <Route exact path='/contact' element={<Contact/>}/>
-          <Route exact path='/services' element={<ServicePage/>}/>
-          <Route exact path='/product' element={<Product/>}/>
-          <Route exact path='/product/:id' element={<SingleProduct/>}/>
-          <Route exact path='/cart' element={<Cart/>}/>
-          <Route exact path='/Booking' element={<Booked/>}/>
-          <Route exact path="/resetpassword/:useremail" element={<ForgetPassword/>}/>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/signup' element={<Signup />} />
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/contact' element={<Contact />} />
+          <Route exact path='/services' element={<ServicePage />} />
+          <Route exact path='/product' element={<Product />} />
+          <Route exact path='/product/:id' element={<SingleProduct />} />
+          <Route exact path='/cart' element={<Cart />} />
+          <Route exact path='/Booking' element={<Booked />} />
+          <Route exact path='/service_Booked/:id' element={<ServiceBooked/>} />
+          <Route exact path="/resetpassword/:useremail" element={<ForgetPassword />} />
         </Routes>
       </Router>
     </div>

@@ -67,23 +67,18 @@ const Booked = () => {
         <h1>Booking</h1>
         <div className="Bookingtasks">
           <div className="products">
-            <div className="productheader">
-              <h3>Index</h3>
-              <h3>Product Name</h3>
-              <h3>Qty</h3>
-              <h3>Price</h3>
-            </div>
             {cartdata.map((value, index) => {
               return (
                 <div className="productdetail" key={index}>
-                  <p>{index + 1}</p>
+                  <img src={`http://localhost:4001${value.product.image}`} alt="product" />
                   <p>{value.product.name}</p>
-                  <p>{value.qty}</p>
+                  <p>Qty : {value.qty}</p>
                   <p>₹{value.product.price}</p>
                 </div>
               );
             })}
           </div>
+          <div className="detailpayment">
           <div className="Inforamtion">
             <h2>Delivery Address</h2>
             <form action="">
@@ -158,6 +153,7 @@ const Booked = () => {
               </span>
               <button onClick={OrderConfirmed}>confirmed</button>
             </div>
+          </div>
           </div>
         </div>
       </div>

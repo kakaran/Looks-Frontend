@@ -51,9 +51,10 @@ h2 {
     flex-direction: row;
     margin: 0px 80px;
     justify-content: space-between;
+    align-items: center;
 }
 
-.head> img{
+.head > img{
     width: 50%;
     height: 50%;
     border-radius: 20px;

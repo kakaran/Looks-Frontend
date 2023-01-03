@@ -16,6 +16,8 @@
     width: 720px;
 }
 
+
+
 .shopingCart::-webkit-scrollbar {
     display: none;
 }
@@ -24,9 +26,12 @@
     /* border: 1px solid black; */
     display: flex;
     gap: 20px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding: 10px;
     font-family: 'Poppins', sans-serif;
-    width: 720px;
+    width: 680px;
+    justify-content: center;
+    align-items: center;
 }
 
 .product > h3{
