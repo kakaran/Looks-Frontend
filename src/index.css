@@ -20,6 +20,10 @@ code {
   padding: 0px;
 }
 
+html{
+  height: 100%;
+}
+
 ::-webkit-scrollbar
 {
   background-color: azure;

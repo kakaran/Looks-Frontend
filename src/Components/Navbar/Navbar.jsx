@@ -10,7 +10,7 @@ export default function Navbar() {
   const [menu, setmenu] = useState(false);
   const [activevalue, setActiveValue] = useState("#");
   const [inoutDirection , setDirection] = useState("/login");
-  const [displayvalue , setDisplayValue] = useState(false);
+  // const [displayvalue , setDisplayValue] = useState(false);
   const [inout , setInout] = useState();
   const [render, setRender] = useState(0);
 
@@ -35,6 +35,7 @@ export default function Navbar() {
     {
       localStorage.removeItem("token")
       localStorage.removeItem("userid");
+      window.location.reload();
     }
     setRender(1)
   }

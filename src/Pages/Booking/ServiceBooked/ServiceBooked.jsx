@@ -23,13 +23,10 @@ const ServiceBooked = () => {
   const [serviceDetail , setServiceDetail] = useState("");
   const { id } = useParams();
 
-  console.log(month, selectdate);
-
   const prodata = {
     service_id: id,
     userid: localStorage.getItem("userid"),
   };
-  console.log(prodata);
 
   const [deldetail, setdeldetail] = useState({
     name: "",
@@ -40,15 +37,13 @@ const ServiceBooked = () => {
   useEffect(() => {
     const servicedataload = async () => {
       try {
-        const detail = (
-          await axios.post("http://localhost:4001/service/singleService",{
+        const detail = (await axios.post("http://localhost:4001/service/singleService",{
             data: {
               _id: prodata.service_id,
             },
           })
         ).data;
         setServiceDetail(detail)
-        console.log(detail);
       } catch (error) {
         console.log(error);
       }
@@ -58,8 +53,7 @@ const ServiceBooked = () => {
 
   const bookservice = async () => {
     try {
-      const data = (
-        await axios.post("http://localhost:4001/serviceBooking/booking", {
+     const data =(await axios.post("http://localhost:4001/serviceBooking/booking", {
           data: {
             mon: month,
             date: selectdate,

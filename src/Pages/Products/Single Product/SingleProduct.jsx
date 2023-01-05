@@ -6,9 +6,12 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { BsShieldFillCheck } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
+import { SmileOutlined } from '@ant-design/icons';
+import { notification } from 'antd';
 
 const SingleProduct = () => {
   const [singleProduct, setSingleProduct] = useState({});
+  const [api, contextHolder] = notification.useNotification();
   const { id } = useParams();
   const [qty, setQty] = useState(1);
   const prodata = {
@@ -45,7 +48,18 @@ const SingleProduct = () => {
     try {
       if(prodata.userid){
         const data = (await axios.post(`http://localhost:4001/cart/cart`,{prodata})).data
-        console.log(data);
+        api.open({
+          message: 'Cart Message',
+          description:
+            `${singleProduct.name} added to cart`,
+          icon: (
+            <SmileOutlined
+              style={{
+                color: '#108ee9',
+              }}
+            />
+          ),
+        });
       }else{
         toast.error('Kindly Please Login !', {
           position: "top-center",
@@ -65,6 +79,7 @@ const SingleProduct = () => {
   
   return (
     <>
+     {contextHolder}
       <div style={{ backgroundColor: "#e9cebc", padding: "0px 25px" }}>
         <Navbar />
       </div>

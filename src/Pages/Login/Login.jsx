@@ -36,6 +36,7 @@ export default function Login() {
           progress: undefined,
           });
           navigate("/")
+          window.location.reload();
       }
     }).catch((error) => {
       toast.error(`${error.request.response}`, {
