@@ -30,6 +30,9 @@ const AdminMenu = () => {
                 <p onClick={() =>{
                   navigate("/admin/productAdd")
                 }}>Product Add</p>
+                <p onClick={() =>{
+                  navigate("/admin/Products")
+                }}>Products List</p>
               </span>
             </div>
           )}
@@ -50,7 +53,9 @@ const AdminMenu = () => {
           {isServiceActive && (
             <div className="Categoriesdropdown">
               <span>
-                <p>Services Add</p>
+                <p onClick={() =>{
+                  navigate("/admin/ServicesAdd")
+                }}>Services Add</p>
               </span>
             </div>
           )}

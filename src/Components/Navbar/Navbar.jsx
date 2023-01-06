@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from "react";
 import image2 from "../../Images/LooksLogo.png";
-import { AiOutlineHome } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Sling as Hamburger } from "hamburger-react";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [menu, setmenu] = useState(false);
-  const [activevalue, setActiveValue] = useState("#");
-  const [inoutDirection , setDirection] = useState("/login");
+  const [activevalue, setActiveValue] = useState("#home");
+  const [inoutDirection, setDirection] = useState("/login");
   // const [displayvalue , setDisplayValue] = useState(false);
-  const [inout , setInout] = useState();
+  const [inout, setInout] = useState();
   const [render, setRender] = useState(0);
-
-
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem("token")) {
       setInout("Logout");
@@ -24,22 +21,18 @@ export default function Navbar() {
       setInout("Login");
       setDirection("/login");
     }
-    setRender(0)
+    setRender(0);
   }, [render]);
 
-
-
-  function handleChange()
-  {
-    if(localStorage.getItem("token"))
-    {
-      localStorage.removeItem("token")
+  function handleChange() {
+    if (localStorage.getItem("token")) {
+      localStorage.removeItem("token");
       localStorage.removeItem("userid");
+      navigate("/")
       window.location.reload();
     }
-    setRender(1)
+    setRender(1);
   }
-
 
   return (
     <>
@@ -72,7 +65,7 @@ export default function Navbar() {
             }}
             className={activevalue === "#" ? "active" : " "}
           >
-            <AiOutlineHome style={{ fontSize: "22px" }} />
+            Home
           </Link>
           <Link
             to="/about"
@@ -110,7 +103,7 @@ export default function Navbar() {
           >
             Products
           </Link>
-          <Link
+          {localStorage.getItem("token") ? <Link
             to="/cart"
             onClick={() => {
               setActiveValue("#insta");
@@ -118,10 +111,14 @@ export default function Navbar() {
             className={activevalue === "#insta" ? "active" : " "}
           >
             <FaShoppingCart style={{ fontSize: "22px" }} />
-          </Link>
-          <Link to={inoutDirection} className="navbar_btn" onClick={()=>{
+          </Link> : ""}
+          <Link
+            to={inoutDirection}
+            className="navbar_btn"
+            onClick={() => {
               handleChange();
-            }}>
+            }}
+          >
             {inout}
           </Link>
         </div>

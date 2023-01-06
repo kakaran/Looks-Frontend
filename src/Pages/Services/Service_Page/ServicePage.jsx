@@ -5,10 +5,12 @@ import Navbar from "../../../Components/Navbar/Navbar";
 import { BiRupee } from "react-icons/bi";
 import "./Service_Page.css";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 const ServicePage = () => {
   const [service, setService] = useState([]);
   const navigate = useNavigate();
+  let userid = localStorage.getItem("userid");
 
   useEffect(() => {
     const loadpackages = async () => {
@@ -47,7 +49,17 @@ const ServicePage = () => {
                 </p>
                 <button
                   onClick={() => {
-                    navigate(`/service_Booked/${prod._id}`);
+                    userid ? navigate(`/service_Booked/${prod._id}`)
+                    : toast.info('🛡️ Kindly Please Login', {
+                      position: "top-center",
+                      autoClose: 2000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });
                   }}
                 >
                   Buy Now
@@ -58,6 +70,7 @@ const ServicePage = () => {
         </div>
       </div>
       <Footer />
+      <ToastContainer/>
     </>
   );
 };

@@ -16,7 +16,9 @@ import ErrorPage from './Pages/404 Page/ErrorPage';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import Admin from './Pages/Admin/Admin';
-import ProductAdd from './Pages/ProductAdd/ProductAdd';
+import ProductAdd from './Pages/Products/ProductAdd/ProductAdd';
+import ProductDisplay from './Pages/Products/Product Display/ProductDisplay';
+import ServiceAdd from './Pages/Services/Services Add/ServiceAdd';
 
 function App() {
   const [check, setCheck] = useState("");
@@ -59,6 +61,8 @@ function App() {
             <Route exact path="/resetpassword/:useremail" element={<ForgetPassword />} />
             <Route exact path='/admin' element={<Admin />} />
             <Route exact path='/admin/ProductAdd' element={<ProductAdd />} />
+            <Route exact path='/admin/Products' element={<ProductDisplay />} />
+            <Route exact path='/admin/ServicesAdd' element={<ServiceAdd />} />
           </Routes>
         </Router>
       </div>

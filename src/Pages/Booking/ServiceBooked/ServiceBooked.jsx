@@ -3,7 +3,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
 import { WiTime9 } from "react-icons/wi";
 import { Calendar } from "react-date-range";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import format from "date-fns/format";
 import Navbar from "../../../Components/Navbar/Navbar";
 import Footer from "../../../Components/Footer/Footer";
@@ -11,8 +11,11 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import "./ServiceBooked.css";
 import axios from "axios";
+import Swal from 'sweetalert2'
+
 
 const ServiceBooked = () => {
+  const navigate = useNavigate()
   const [selectdate, setDate] = useState(
     new Date().toLocaleString("en-US", { day: "2-digit" })
   );
@@ -65,6 +68,17 @@ const ServiceBooked = () => {
           },
         })
       ).data;
+      Swal.fire({
+        title: 'Service Booked',
+        text: "Saloon team contact them you in under 15min",
+        showClass: {
+          popup: 'animate__animated animate__bounceInRight'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__bounceOutLeft'
+        }
+      })
+      navigate("/services")
     } catch (error) {
       console.log(error);
     }
@@ -156,9 +170,8 @@ const ServiceBooked = () => {
                 autoComplete="off"
                 onChange={Onchangedeldetail}
               />
-              <input type="text" placeholder="Date" />
             </form>
-            <Calendar date={new Date()} onChange={handleSelect} />
+            <Calendar date={new Date()} minDate={new Date()} onChange={handleSelect} />
           </div>
         </div>
         <div className="serviceBooking_Detail">

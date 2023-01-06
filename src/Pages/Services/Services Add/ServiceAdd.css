@@ -1,0 +1,29 @@
+.serviceAddContainer{
+    display: flex;
+}
+
+.AddServiceandInfo{
+    width: 100%;
+}
+
+.AddServiceandInfo hr {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ServicesInfo {
+    padding: 25px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.ServicesInfo h1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.ServicesInfo p {
+    padding: 10px 0px;
+    color: #878e9a;
+}

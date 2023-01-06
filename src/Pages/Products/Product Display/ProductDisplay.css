@@ -1,0 +1,111 @@
+.productdisplayContainer {
+    display: flex;
+}
+
+.ProductDisplayandInfo {
+    width: 100%;
+}
+
+.ProductDisplayandInfo hr {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ProductDisInfo {
+    padding: 25px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+.ProductDisInfo h1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.ProductDisInfo p {
+    padding: 10px 0px;
+    color: #878e9a;
+}
+
+.ProductDisplaytableContanier {
+    display: flex;
+}
+
+.ProductsDisplay {
+    margin: auto;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.ProductsDisplay table {
+    margin: 25px;
+    display: block;
+    overflow: auto;
+    max-height: 730px;
+    scroll-behavior: smooth; 
+    background-color: #fbfbfc;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.ProductsDisplay table::-webkit-scrollbar{
+    display: none;
+}
+
+.ProductsDisplay table tbody td{
+    padding: 10px 0px ;
+}
+
+.ProductsDisplay table tr:nth-child(1) {
+    text-transform: uppercase;
+    /* box-shadow: none; */
+}
+
+.ProductsDisplay table tr th:nth-child(1),
+td:nth-child(1) {
+    width: 80px
+}
+
+.ProductsDisplay table tr th:nth-child(2),
+td:nth-child(2) {
+    width: 190px
+}
+
+.ProductsDisplay table tr th:nth-child(3),
+td:nth-child(3) {
+    width: 120px
+}
+
+.ProductsDisplay table tr td img {
+    width: 110px;
+    height: 80px;
+}
+
+.ProductsDisplay table tr th:nth-child(4),
+td:nth-child(4) {
+    width: 200px
+}
+
+.ProductsDisplay table tr th:nth-child(5),
+td:nth-child(5) {
+    width: 100px
+}
+
+.ProductsDisplay table tr th:nth-child(6),
+td:nth-child(6) {
+    width: 100px;
+    text-transform: uppercase;
+}
+
+.ProductsDisplay table tr th:nth-child(7),
+td:nth-child(7) {
+    width: 400px
+}
+
+.ProductsDisplay table tr th:nth-child(8),
+td:nth-child(8) {
+    width: 550px;
+}

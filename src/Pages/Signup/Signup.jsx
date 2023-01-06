@@ -1,12 +1,11 @@
-import React from 'react';
+import React,{ useState } from 'react';
+import Swal from 'sweetalert2'
 import {Link, useNavigate} from "react-router-dom";
 import { AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import axios from "axios";
 import "./Signup.css"
-import { useState } from 'react';
 
 export default function Signup() {
   const [passwordtype, setPasswordType] = useState("password");
@@ -41,8 +40,6 @@ export default function Signup() {
         });
         console.log("hi");
     }else{
-
-
     await axios.post("http://localhost:4001/api/Signup",user).then((response)=>{
         toast.success(`${response.request.response}`, {
           position: "top-center",
