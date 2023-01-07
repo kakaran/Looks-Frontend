@@ -2,11 +2,15 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { HiDocumentAdd } from "react-icons/hi";
+import { MdDeleteForever } from "react-icons/md";
 import AdminMenu from "../../../Components/Adminmenu/AdminMenu";
+import { ToastContainer, toast } from 'react-toastify';
 import "./ProductDisplay.css";
 
 const ProductDisplay = () => {
   const [allProduct, setAllProduct] = useState([]);
+  const [render, setRender] = useState(0);
+
 
   useEffect(() => {
     const GetAllProducts = async () => {
@@ -15,12 +19,33 @@ const ProductDisplay = () => {
           await axios.get("http://localhost:4001/product/products", {})
         ).data;
         setAllProduct(data);
+        setRender(0)
       } catch (error) {
         console.log(error);
       }
     };
     GetAllProducts();
-  }, []);
+  }, [render]);
+
+
+  const DeleteProduct = async (value) =>{
+    try {
+        const data = (await axios.delete(`http://localhost:4001/product/products/${value}`,)).data
+        toast.success('Product Successfully Delete ', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+          setRender(1)
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -33,7 +58,7 @@ const ProductDisplay = () => {
               <HiDocumentAdd style={{ color: "#d5d8dd", width: "22px" }} />
             </h1>
             <p>
-              All the products that are available right now on the website.
+              The product list feature in admin pannel display the all products
             </p>
           </div>
           <hr />
@@ -49,13 +74,13 @@ const ProductDisplay = () => {
                     <th>Price</th>
                     <th>Category</th>
                     <th>Short Info</th>
-                    {/* <th>Description</th> */}
+                    <th>Option</th>
                   </tr>
                 </thead>
                 <tbody>
                   {allProduct.map((value, index) => {
                     return (
-                      <tr>
+                      <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{value._id}</td>
                         <td>
@@ -68,7 +93,9 @@ const ProductDisplay = () => {
                         <td>₹{value.price}</td>
                         <td>{value.category}</td>
                         <td>{value.miniInfo}</td>
-                        {/* <td>{value.fullInfo}</td> */}
+                        <td onClick={() =>{
+                          DeleteProduct(value._id)
+                        }}><MdDeleteForever/></td>
                       </tr>
                     );
                   })}
@@ -78,6 +105,7 @@ const ProductDisplay = () => {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 };

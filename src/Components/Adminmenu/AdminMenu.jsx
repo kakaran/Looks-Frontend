@@ -49,6 +49,7 @@ const AdminMenu = () => {
               <h3>Services</h3>
             </span>
             <IoIosArrowDown className="CatHeadIcons" />
+            
           </span>
           {isServiceActive && (
             <div className="Categoriesdropdown">
@@ -56,6 +57,9 @@ const AdminMenu = () => {
                 <p onClick={() =>{
                   navigate("/admin/ServicesAdd")
                 }}>Services Add</p>
+                <p onClick={() =>{
+                  navigate("/admin/Services")
+                }}>Services List</p>
               </span>
             </div>
           )}

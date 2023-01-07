@@ -27,3 +27,167 @@
     padding: 10px 0px;
     color: #878e9a;
 }
+
+.addserviceController{
+    margin: 25px;
+    padding: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fbfbfc;
+}
+
+.addserviceController h3{
+    font-size: 21px;
+    padding: 20px 0px;
+}
+
+.AddServiceForm{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 20px;
+}
+
+.getproductInformation{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.getproductInformation label{
+    margin: 10px 0px;
+}
+
+.getproductInformation input{
+    border: 1px solid #ecedef;
+    padding: 15px;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #fbfbfc;
+}
+
+.AddserviceImage{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    width: 400px;
+}
+
+.AddserviceImage input{
+    margin: 42px 0px;
+    height: 110px;
+    border: 1px solid #ecedef;
+    padding: 15px;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.addserviceController button{
+    width: 100%;
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.addserviceController button:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.addserviceController button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.addserviceController button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.AddServiceController_display{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ShowAddService {
+    width: 649px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 25px;
+    padding: 25px;
+}
+
+.Addservicetable table tr:nth-child(1) {
+    display: flex;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    box-shadow: none;
+    text-align: center;
+}
+
+.Addservicetable table tr th:nth-child(1) {
+    width: 70px;
+}
+
+.Addservicetable table tr td:nth-child(1) {
+    width: 70px;
+}
+
+.Addservicetable table tr th:nth-child(2) {
+    width: 240px;
+}
+
+.Addservicetable table tr td:nth-child(2) {
+    width: 240px;
+}
+
+.Addservicetable table tr th:nth-child(3),
+td:nth-child(3) {
+    width: 220px;
+}
+
+.Addservicetable table tr td:nth-child(3) {
+    width: 220px;
+}
+
+.Addservicetable table tr th:nth-child(4),
+td:nth-child(4) {
+    width: 120px;
+}
+
+.Addservicetable table tr td:nth-child(4) {
+    width: 120px;
+}
+
+.Addservicetable table tr {
+    display: flex;
+    text-align: center;
+    padding: 20px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+}

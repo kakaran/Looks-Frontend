@@ -19,6 +19,7 @@ import Admin from './Pages/Admin/Admin';
 import ProductAdd from './Pages/Products/ProductAdd/ProductAdd';
 import ProductDisplay from './Pages/Products/Product Display/ProductDisplay';
 import ServiceAdd from './Pages/Services/Services Add/ServiceAdd';
+import ServiceDisplay from './Pages/Services/Service Display/ServiceDisplay';
 
 function App() {
   const [check, setCheck] = useState("");
@@ -63,6 +64,7 @@ function App() {
             <Route exact path='/admin/ProductAdd' element={<ProductAdd />} />
             <Route exact path='/admin/Products' element={<ProductDisplay />} />
             <Route exact path='/admin/ServicesAdd' element={<ServiceAdd />} />
+            <Route exact path='/admin/Services' element={<ServiceDisplay />} />
           </Routes>
         </Router>
       </div>

@@ -1,5 +1,4 @@
 import React,{ useState } from 'react';
-import Swal from 'sweetalert2'
 import {Link, useNavigate} from "react-router-dom";
 import { AiOutlineEye,AiOutlineEyeInvisible} from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';

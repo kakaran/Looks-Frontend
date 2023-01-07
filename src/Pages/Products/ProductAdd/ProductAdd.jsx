@@ -39,9 +39,11 @@ const ProductAdd = () => {
       console.log(error);
     }
   };
+  
   const Onchangedeldetail = (e) => {
     setProductform({ ...productform, [e.target.name]: e.target.value });
   };
+
   return (
     <div className="productaddContainer">
       <AdminMenu />
