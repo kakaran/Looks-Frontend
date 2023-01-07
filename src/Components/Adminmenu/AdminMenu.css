@@ -16,7 +16,7 @@
 .categories_Header {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     /* font-size: 15px; */
     color: #4a4e69;

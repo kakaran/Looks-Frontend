@@ -23,7 +23,6 @@ const SingleProduct = () => {
   //---------- Load the product data ----//
   useEffect(() => {
     const dataGet = async () => {
-      
       try {
         const data = (
           await axios.get(`http://localhost:4001/product/products/${id}`, {})
@@ -46,8 +45,12 @@ const SingleProduct = () => {
   //------------ Add the product in cart ------------//
   const addProductinCart = async () =>{
     try {
+      axios.defaults.headers = {
+        auth: localStorage.getItem("token"),
+      };
       if(prodata.userid){
         const data = (await axios.post(`http://localhost:4001/cart/cart`,{prodata})).data
+        console.log(data);
         api.open({
           message: 'Cart Message',
           description:
