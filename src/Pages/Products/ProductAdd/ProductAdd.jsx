@@ -51,7 +51,7 @@ const ProductAdd = () => {
             Add Product
             <HiDocumentAdd style={{ color: "#d5d8dd", width: "22px" }} />{" "}
           </h1>
-          <p>The add product feature in admin pannel</p>
+          <p>Add the products, you wish to display on the website.</p>
         </div>
         <hr />
         <div className="AddproductController_Display">

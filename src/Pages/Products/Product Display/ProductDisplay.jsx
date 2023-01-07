@@ -33,7 +33,7 @@ const ProductDisplay = () => {
               <HiDocumentAdd style={{ color: "#d5d8dd", width: "22px" }} />
             </h1>
             <p>
-              The product list feature in admin pannel display the all products
+              All the products that are available right now on the website.
             </p>
           </div>
           <hr />

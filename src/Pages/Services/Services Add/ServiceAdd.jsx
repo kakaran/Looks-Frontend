@@ -14,7 +14,7 @@ const ServiceAdd = () => {
             Add Service
             <HiDocumentAdd style={{ color: "#d5d8dd", width: "22px" }} />{" "}
           </h1>
-          <p>The add Service feature in admin pannel</p>
+          <p>Add the services, you want to display on the website.</p>
           </div>
         <hr />
         </div>

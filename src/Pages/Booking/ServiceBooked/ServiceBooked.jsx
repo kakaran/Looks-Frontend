@@ -138,7 +138,7 @@ const ServiceBooked = () => {
         </div>
         <div className="booking_information">
           <div className="Inforamtion">
-            <h2>Booke Service</h2>
+            <h2>Book a Service</h2>
             <form action="">
               <label htmlFor="name">Name</label>
               <input
