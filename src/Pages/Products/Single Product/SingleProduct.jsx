@@ -96,7 +96,7 @@ const SingleProduct = () => {
             <BsShieldFillCheck />
             <h3>Certified Authentic</h3>
             <p>
-              We guarantee this is an authentic Louis Vuitton item or 100% of
+              We guarantee this is an authentic item or 100% of
               your money back.
             </p>
           </div>
