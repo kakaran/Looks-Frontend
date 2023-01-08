@@ -13,13 +13,14 @@ import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
 import ServiceBooked from './Pages/Booking/ServiceBooked/ServiceBooked';
 import ErrorPage from './Pages/404 Page/ErrorPage';
-import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import Admin from './Pages/Admin/Admin';
 import ProductAdd from './Pages/Products/ProductAdd/ProductAdd';
 import ProductDisplay from './Pages/Products/Product Display/ProductDisplay';
 import ServiceAdd from './Pages/Services/Services Add/ServiceAdd';
 import ServiceDisplay from './Pages/Services/Service Display/ServiceDisplay';
+import OrderPage from './Pages/Order Page/OrderPage';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [check, setCheck] = useState("");
@@ -65,6 +66,7 @@ function App() {
             <Route exact path='/admin/Products' element={<ProductDisplay />} />
             <Route exact path='/admin/ServicesAdd' element={<ServiceAdd />} />
             <Route exact path='/admin/Services' element={<ServiceDisplay />} />
+            <Route exact path='/admin/OrderPage/:id' element={<OrderPage />} />
           </Routes>
         </Router>
       </div>

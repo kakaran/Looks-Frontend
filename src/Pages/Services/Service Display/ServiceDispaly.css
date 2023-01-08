@@ -1,8 +1,8 @@
-.ServiceDisplayContainer{
+.ServiceDisplayContainer {
     display: flex;
 }
 
-.ServiceDisplayInfo{
+.ServiceDisplayInfo {
     width: 100%;
 }
 
@@ -42,19 +42,19 @@
     display: block;
     overflow: auto;
     max-height: 730px;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
     background-color: #fbfbfc;
     padding: 5px 15px;
     border-radius: 10px;
     box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 }
 
-.ServiceDisplay table::-webkit-scrollbar{
+.ServiceDisplay table::-webkit-scrollbar {
     display: none;
 }
 
-.ServiceDisplay table tbody td{
-    padding: 10px 0px ;
+.ServiceDisplay table tbody td {
+    padding: 10px 0px;
 }
 
 .ServiceDisplay table tr:nth-child(1) {
@@ -82,8 +82,11 @@ td:nth-child(3) {
     height: 80px;
 }
 
-.ServiceDisplay table tr th:nth-child(4),
-td:nth-child(4) {
+.ServiceDisplay table tr th:nth-child(4) {
+    width: 350px
+}
+
+.ServiceDisplay table tr td:nth-child(4) {
     width: 350px
 }
 
@@ -92,12 +95,11 @@ td:nth-child(5) {
     width: 100px
 }
 
-.ServiceDisplay table tr th:nth-child(6),
-td:nth-child(6) {
+.ServiceDisplay table tr th:nth-child(6) {
     width: 150px;
 }
 
-.ServiceDisplay table tr td:nth-child(6){
+.ServiceDisplay table tr td:nth-child(6) {
     font-size: 25px;
     cursor: pointer
 }

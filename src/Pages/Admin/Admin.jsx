@@ -143,11 +143,13 @@ const Admin = () => {
                 <tbody>
                   {totalOrders.map((value,index)=>{
                     return(
-                      <tr key={index}>
+                      <tr key={index} onClick={() =>{
+                        navigator(`/admin/OrderPage/${value._id}`)
+                      }}>
                         <td>{totalOrders.length-index}</td>
                         <td>{value._id}</td>
                         <td>{value.userId}</td>
-                        <td>{value.totalprice}</td>
+                        <td>₹{value.totalprice}</td>
                         <td>{value.createdAt.slice(0,10)}</td>
                       </tr>
                     )

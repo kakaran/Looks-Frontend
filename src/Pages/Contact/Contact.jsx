@@ -5,7 +5,6 @@ import "./Contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
 import { WiTime9 } from "react-icons/wi";
-import map from "../../Images/map.png";
 
 export default function Contact() {
   return (
@@ -64,7 +63,15 @@ export default function Contact() {
                   Send Message
                 </button>
               </form>
-              <img src={map} alt="" />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13993.59689760866!2d77.11820640432131!3d28.737495151524843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d013e7c658b6f%3A0xc24e2009b7c7888c!2sAmazing%20Looks%20Makeover!5e0!3m2!1sen!2sin!4v1673181627738!5m2!1sen!2sin"
+                width="1000"
+                height="450"
+                style={{border:0}}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>

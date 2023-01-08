@@ -154,9 +154,12 @@ td:nth-child(4) {
     width: 150px
 }
 
-.OrderDisplay table tr th:nth-child(5),
-td:nth-child(5) {
-    width: 190  px
+.OrderDisplay table tr th:nth-child(5) {
+    width: 190px;
+}
+
+.OrderDisplay table tr td:nth-child(5) {
+    width: 190px;
 }
 
 .AdmindashboardContainer h1{

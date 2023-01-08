@@ -1,0 +1,74 @@
+.orderContainer {
+    display: flex;
+
+}
+
+.OrderIdAndInfo {
+    width: 100%;
+}
+
+.OrderId {
+    padding: 25px 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.OrderId h2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.OrderIdAndInfo hr {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.OrderInfoContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ProductDataDisplay{
+    width: 700px;
+    /* border: 1px solid black; */
+    max-height: 750px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 25px;
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth; 
+    border-radius: 10px;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    background-color: #fbfbfc;
+}
+
+.ProductDataDisplay h2{
+    padding: 10px 7px;
+}
+
+.ProductDataCard{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 25px;
+    font-weight:600;
+    font-size: 19px;
+}
+
+.ProductDataCard p:nth-child(1){
+    width: 20px;
+}
+
+.ProductDataCard img{
+    width: 200px;
+    height: 120px;
+}
+
+.ProductDataCard p:nth-child(3){
+    width: 240px;
+    text-align: center;
+}
+
+.ProductDataCard p:nth-child(4){
+    width: 50px;
+}
