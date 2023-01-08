@@ -42,7 +42,7 @@ const Admin = () => {
     const totalusersload = async () => {
       try {
         const data = (
-          await axios.get("http://192.168.0.191:4001/api/totalusers")
+          await axios.get("http://localhost:4001/api/totalusers")
         ).data;
         await setaccountinfo({
           usercount : data.user.usercount,
@@ -55,7 +55,7 @@ const Admin = () => {
 
     const todayOrders = async () =>{
       try {
-        const data = (await axios.get("http://192.168.0.191:4001/orders/todayorder",{})).data
+        const data = (await axios.get("http://localhost:4001/orders/todayorder",{})).data
         setTodayorders(data)
       } catch (error) {
         console.log(error);
@@ -65,7 +65,7 @@ const Admin = () => {
     const totalOrders = async () =>{
       try {
         let sum = 0;
-        const data = (await axios.get("http://192.168.0.191:4001/orders/orders",{})).data
+        const data = (await axios.get("http://localhost:4001/orders/orders",{})).data
         setTotalorders(data)
         
         data.forEach((value) =>{

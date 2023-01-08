@@ -70,7 +70,7 @@ const ServiceBooked = () => {
       ).data;
       Swal.fire({
         title: 'Service Booked',
-        text: "Saloon team contact them you in under 15min",
+        text: "Salon team will contact you in under 15 mins",
         showClass: {
           popup: 'animate__animated animate__bounceInRight'
         },
