@@ -167,6 +167,12 @@ td:nth-child(4) {
     padding: 0px 20px;
 }
 
+@media (min-width : 1495px){
+    .OrderDisplay table{
+        height: 350px ;
+    }
+}
+
 @media (min-width: 768px) {
     .Dashboardtopbar button {
         font-size: 1.125rem;

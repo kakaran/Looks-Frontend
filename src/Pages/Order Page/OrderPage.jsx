@@ -15,12 +15,13 @@ const OrderPage = () => {
     const productdataload = async () => {
       try {
         const data = (
-          await axios.get(`http://192.168.0.191:4001/product/listProduct/${id}`)
+          await axios.get(`http://localhost:4001/product/listProduct/${id}`)
         ).data;
         await setProductCardData({
             delivery : data.delivery,
             cart : data.cart
         });
+        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -85,7 +86,7 @@ const OrderPage = () => {
                   name="address"
                   id="address"
                   cols="30"
-                  rows="10"
+                  rows="4"
                   value={productCardData.delivery.address}
                   disabled
                 ></textarea>

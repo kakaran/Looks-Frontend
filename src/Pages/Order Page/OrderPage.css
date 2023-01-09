@@ -72,3 +72,9 @@
 .ProductDataCard p:nth-child(4){
     width: 50px;
 }
+
+@media (min-width : 1500px){
+    .ProductDataDisplay{
+        height: 610px;
+    }
+}

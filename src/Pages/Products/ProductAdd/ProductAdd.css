@@ -195,3 +195,18 @@ td:nth-child(4) {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 10px;
 }
+
+
+@media (min-width : 1500px){
+    .GetProductInformation{
+        width: 350px;
+    }
+
+    .AddProductImage{
+        width: 300px;
+    }
+
+    .AddProductController{
+        margin: 10px;
+    }
+}

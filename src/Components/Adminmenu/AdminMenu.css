@@ -60,3 +60,10 @@
     background-color: #e6f4ff;
     color: #2e86ff;
 }
+
+
+@media (min-width : 1495px){
+    .AdminMenuContainer{
+        height: 740px;
+    }
+}

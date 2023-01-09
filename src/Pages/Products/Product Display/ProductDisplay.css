@@ -112,3 +112,9 @@ td:nth-child(8) {
     font-size: 25px;
     cursor: pointer
 }
+
+@media (min-width : 1500px){
+    .ProductsDisplay table{
+        height: 610px;
+    }
+}

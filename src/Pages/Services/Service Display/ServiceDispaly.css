@@ -103,3 +103,9 @@ td:nth-child(5) {
     font-size: 25px;
     cursor: pointer
 }
+
+@media (min-width : 1500px){
+    .ServiceDisplay table{
+        height: 610px;
+    }
+}

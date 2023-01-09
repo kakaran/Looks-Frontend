@@ -39,7 +39,7 @@ const ProductAdd = () => {
       console.log(error);
     }
   };
-  
+
   const Onchangedeldetail = (e) => {
     setProductform({ ...productform, [e.target.name]: e.target.value });
   };
@@ -80,7 +80,7 @@ const ProductAdd = () => {
                   name="Description"
                   id="Description"
                   cols="30"
-                  rows="10"
+                  rows="4"
                   onChange={Onchangedeldetail}
                 ></textarea>
                 <label htmlFor="Price">Price</label>
