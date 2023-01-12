@@ -75,7 +75,7 @@ const Booked = () => {
         <Navbar />
       </div>
       <div className="bookingcontainer">
-        <h1>Order</h1>
+        <h1>Order Summary</h1>
         <div className="Bookingtasks">
           <div className="products">
             {cartdata.map((value, index) => {

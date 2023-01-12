@@ -15,18 +15,18 @@ const Cart = () => {
     id: localStorage.getItem("userid"),
   };
   const [totalprice, setTotalprice] = useState(0);
-  const navigate =  useNavigate();
+  const navigate = useNavigate();
 
-  useEffect(() => { 
+  useEffect(() => {
     try {
       axios.defaults.headers = {
         auth: localStorage.getItem("token"),
       };
 
-       const productdataload = async () => {
+      const productdataload = async () => {
         const data = (
           await axios.post("http://localhost:4001/cart/cartproduct", { userid })
-          ).data;
+        ).data;
         setCartdata(data.detail);
         setTotalprice(data.totalvalue)
       };
@@ -37,23 +37,25 @@ const Cart = () => {
     }
   }, [render]);
 
-  
 
 
-  const deleteproduct = async (value) =>{
+
+  const deleteproduct = async (value) => {
     try {
-      const data = (await axios.delete(`http://localhost:4001/cart/cart`,{data : {
-        id : userid.id,
-        product : value
-      }})).data;
+      const data = (await axios.delete(`http://localhost:4001/cart/cart`, {
+        data: {
+          id: userid.id,
+          product: value
+        }
+      })).data;
       setRender(1)
     } catch (error) {
       console.log(error)
     }
   }
 
-  const cartcheck = async () =>{
-    if(totalprice === 0){
+  const cartcheck = async () => {
+    if (totalprice === 0) {
       toast.error('Kindly Please add the product on cart !', {
         position: "top-center",
         autoClose: 5000,
@@ -62,9 +64,9 @@ const Cart = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        });
-        navigate("")
-      }else{
+      });
+      navigate("")
+    } else {
       navigate("/Booking")
     }
   }
@@ -76,17 +78,17 @@ const Cart = () => {
       </div>
       <div className="cartContainer">
         <div className="shopingCart Pro_width">
-          {cartdata.map((value,index) => {  
+          {cartdata.map((value, index) => {
             return (
               <div className="product" key={index}>
                 <img src={`http://localhost:4001${value.product.image}`} alt="product" />
                 <div className="detail">
                   <div className="name">
-                <Link to={`/product/${value.product._id}`}>
-                    <h3>{value.product.name}</h3>
+                    <Link to={`/product/${value.product._id}`}>
+                      <h3>{value.product.name}</h3>
                     </Link>
-                    <button onClick={async () =>{
-                       await deleteproduct(value.product._id);
+                    <button onClick={async () => {
+                      await deleteproduct(value.product._id);
                     }}>X</button>
                   </div>
                   <div className="qutPrice">
@@ -102,15 +104,18 @@ const Cart = () => {
           <div className="box">
             <span><p>Subtotal</p><p>₹{totalprice}</p></span>
             <span><p>Shipping Fee</p><p>₹{totalprice == 0 ? totalprice : 50}</p></span>
-            <span><p>Total: </p><p>₹{totalprice == 0 ? totalprice : 50+totalprice}</p></span>
-      
-            <button onClick={cartcheck}>checkout</button>
- 
+            <span><p>Total: </p><p>₹{totalprice == 0 ? totalprice : 50 + totalprice}</p></span>
+            <span>
+              <input type="checkbox" name="" id="" checked/>  <p>Cash on Delivery</p>
+            </span>
+
+            <button onClick={cartcheck}>Confirm</button>
+
           </div>
         </div>
       </div>
       <Footer />
-      <ToastContainer/>
+      <ToastContainer />
     </>
   );
 };

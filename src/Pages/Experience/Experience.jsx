@@ -1,8 +1,10 @@
 import React from "react";
 import "./Experience.css"
 import experienceimg from "../../Images/Experience.jpg"
+import { useNavigate } from "react-router-dom";
 
 export default function Experience() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="experienceContainer">
@@ -29,7 +31,9 @@ export default function Experience() {
               <p>years in service since 2010</p>
             </div>
           </div>
-          <button>Schedule an appointment</button>
+          <button onClick={() =>{
+            navigate("/services")
+          }}>Schedule an appointment</button>
         </div>
       </div>
     </>

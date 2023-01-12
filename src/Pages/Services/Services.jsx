@@ -3,9 +3,11 @@ import "./Services.css";
 import service1 from "../../Images/service1.png";
 import service2 from "../../Images/service2.png";
 import service3 from "../../Images/service3.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 export default function Services() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="serviceContainer">
@@ -53,7 +55,9 @@ export default function Services() {
               Allow us to build an experience around you
             </p>
             <Link to="/services">
-            <button>See Special Packages</button>
+            <button onClick={()=>{
+              navigate("/services")
+            }}>See Special Packages</button>
             </Link>
           </div>
         </div>

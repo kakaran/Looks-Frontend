@@ -89,6 +89,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.box span:nth-child(4){
+    justify-content: left;
+    gap: 5px;
+}
 .box span p:nth-child(1){
     font-weight: 500;
     font-size: 18px;

@@ -25,6 +25,7 @@ const Product = () => {
       }
     }
     productload();
+    window.scrollTo(0, 0)
   },[])
   
 

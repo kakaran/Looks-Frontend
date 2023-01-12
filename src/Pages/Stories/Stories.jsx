@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import storiesimg from "../../Images/storiesimg.jpeg";
 import "./Stories.css";
 export default function Stories() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="storiesContainer">
@@ -49,7 +51,9 @@ export default function Stories() {
                 very reasonable and everyone is friendly and professional.
               </p>
             </div>
-            <button>Schedule an appointment</button>
+            <button onClick={() =>{
+             return navigate("/services")
+            }}>Schedule an appointment</button>
           </div>
         <img src={storiesimg} alt="" />
         </div>
