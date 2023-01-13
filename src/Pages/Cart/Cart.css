@@ -2,12 +2,10 @@
     display: flex;
     justify-content: space-around;
     margin: 50px 0px;
-    height: 700px;
+    max-height: 700px;
     /* border: 1px solid black; */
 }
 
-.Pro_width {
-}
 
 .shopingCart {
     /* border: 1px solid black; */
