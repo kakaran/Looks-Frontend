@@ -17,7 +17,7 @@ const Product = () => {
   useEffect(() =>{
     const productload = async () =>{
       try {
-        const data = (await axios.get("http://localhost:4001/product/products")).data
+        const data = (await axios.get("https://looks-0hws.onrender.com/product/products")).data
         setProductdata(data);
         setSelproduct(data);
       } catch (error) {
@@ -84,7 +84,7 @@ const Product = () => {
             <Link to={`/product/${value._id}`}>
             <div className="Card" key={key}>
             <div className="Card_Image">
-              <img src={`http://localhost:4001${value.image}`}alt="product" />
+              <img src={`https://looks-0hws.onrender.com${value.image}`}alt="product" />
             </div>
             <p className="proName">{value.name}</p>
             <p>{value.miniInfo}</p>

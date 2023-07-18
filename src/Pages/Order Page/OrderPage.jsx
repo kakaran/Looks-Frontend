@@ -15,7 +15,7 @@ const OrderPage = () => {
     const productdataload = async () => {
       try {
         const data = (
-          await axios.get(`http://localhost:4001/product/listProduct/${id}`)
+          await axios.get(`https://looks-0hws.onrender.com/product/listProduct/${id}`)
         ).data;
         await setProductCardData({
             delivery : data.delivery,
@@ -45,7 +45,7 @@ const OrderPage = () => {
                 return(
                     <div className="ProductDataCard" key={index}>
                     <p>{index+1}</p>
-                    <img src={`http://localhost:4001${value.product.image}`} alt="" />
+                    <img src={`https://looks-0hws.onrender.com${value.product.image}`} alt="" />
                     <p>{value.product.name}</p>
                     <p>₹{value.product.price}</p>
                     <p>Qty: {value.qty}</p>

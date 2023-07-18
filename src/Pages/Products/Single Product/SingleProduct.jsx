@@ -25,7 +25,7 @@ const SingleProduct = () => {
     const dataGet = async () => {
       try {
         const data = (
-          await axios.get(`http://localhost:4001/product/products/${id}`, {})
+          await axios.get(`https://looks-0hws.onrender.com/product/products/${id}`, {})
         ).data;
         setSingleProduct(data);
       } catch (error) {
@@ -49,7 +49,7 @@ const SingleProduct = () => {
         auth: localStorage.getItem("token"),
       };
       if(prodata.userid){
-        const data = (await axios.post(`http://localhost:4001/cart/cart`,{prodata})).data
+        const data = (await axios.post(`https://looks-0hws.onrender.com/cart/cart`,{prodata})).data
         console.log(data);
         api.open({
           message: 'Cart Message',
@@ -89,7 +89,7 @@ const SingleProduct = () => {
       <div className="SingleProContainer">
         <div className="Product_image Pro_width">
           <img
-            src={`http://localhost:4001${singleProduct.image}`}
+            src={`https://looks-0hws.onrender.com${singleProduct.image}`}
             alt="Product"
           />
           <div className="certified">

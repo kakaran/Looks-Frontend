@@ -15,7 +15,7 @@ const ServicePage = () => {
   useEffect(() => {
     const loadpackages = async () => {
       await axios
-        .get("http://localhost:4001/service/services", {})
+        .get("https://looks-0hws.onrender.com/service/services", {})
         .then((response) => {
           setService(response.data);
         })
@@ -39,7 +39,7 @@ const ServicePage = () => {
           {service.map((prod) => {
             return (
               <div className="Package_Card">
-                <img src={`http://localhost:4001${prod.image}`} alt="" />
+                <img src={`https://looks-0hws.onrender.com${prod.image}`} alt="" />
                 {/* <p>{prod.Servicename}</p> */}
                 <p>{prod.information}</p>
                 <p>

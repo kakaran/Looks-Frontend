@@ -14,7 +14,7 @@ const ServiceDisplay = () => {
     const GetAllServices = async () => {
       try {
         const data = (
-          await axios.get("http://localhost:4001/service/services", {})
+          await axios.get("https://looks-0hws.onrender.com/service/services", {})
         ).data;
         setAllServices(data);
         setRender(0);
@@ -28,7 +28,7 @@ const ServiceDisplay = () => {
   const DeleteProduct = async (value) => {
     try {
       const data = (
-        await axios.delete(`http://localhost:4001/service/services/${value}`)
+        await axios.delete(`https://looks-0hws.onrender.com/service/services/${value}`)
       ).data;
       toast.success("Service Successfully Delete ", {
         position: "top-center",
@@ -82,7 +82,7 @@ const ServiceDisplay = () => {
                         <td>{value._id}</td>
                         <td>
                           <img
-                            src={`http://localhost:4001${value.image}`}
+                            src={`https://looks-0hws.onrender.com${value.image}`}
                             alt="Serimage"
                           />
                         </td>

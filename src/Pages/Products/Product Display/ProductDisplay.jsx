@@ -16,7 +16,7 @@ const ProductDisplay = () => {
     const GetAllProducts = async () => {
       try {
         const data = (
-          await axios.get("http://localhost:4001/product/products", {})
+          await axios.get("https://looks-0hws.onrender.com/product/products", {})
         ).data;
         setAllProduct(data);
         setRender(0)
@@ -30,7 +30,7 @@ const ProductDisplay = () => {
 
   const DeleteProduct = async (value) =>{
     try {
-        const data = (await axios.delete(`http://localhost:4001/product/products/${value}`,)).data
+        const data = (await axios.delete(`https://looks-0hws.onrender.com/product/products/${value}`,)).data
         toast.success('Product Successfully Delete ', {
           position: "top-center",
           autoClose: 2000,
@@ -85,7 +85,7 @@ const ProductDisplay = () => {
                         <td>{value._id}</td>
                         <td>
                           <img
-                            src={`http://localhost:4001${value.image}`}
+                            src={`https://looks-0hws.onrender.com${value.image}`}
                             alt="Proimage"
                           />
                         </td>

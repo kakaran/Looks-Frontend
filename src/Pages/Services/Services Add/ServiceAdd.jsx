@@ -18,7 +18,7 @@ const ServiceAdd = () => {
         formData.append("image",filedata);
         formData.append("information",productform.Information);
         formData.append("cost",productform.cost);
-        const data = (await axios.post("http://localhost:4001/service/services",formData,{
+        const data = (await axios.post("https://looks-0hws.onrender.com/service/services",formData,{
           headers: {
             "Content-Type": "multipart/form-data",
           },

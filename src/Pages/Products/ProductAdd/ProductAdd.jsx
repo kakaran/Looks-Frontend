@@ -27,7 +27,7 @@ const ProductAdd = () => {
       formData.append("price", productform.Price);
       formData.append("category", productform.Category);
       const data1 = (
-        await axios.post("http://localhost:4001/product/products", formData, {
+        await axios.post("https://looks-0hws.onrender.com/product/products", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },

@@ -22,7 +22,7 @@ export default function Login() {
 
   const handleLogin = async () => {
     await axios
-      .post("http://localhost:4001/api/Login", user)
+      .post("https://looks-0hws.onrender.com/api/Login", user)
       .then((response) => {
         if (response.data.token) {
           localStorage.setItem("token", response.data.token);
@@ -55,7 +55,7 @@ export default function Login() {
 
   const handleforgetpassword = async () => {
     await axios
-      .post("http://localhost:4001/api/EmailCheck", { useremail })
+      .post("https://looks-0hws.onrender.com/api/EmailCheck", { useremail })
       .then((response) => {
         toast.success(`${response.request.response}`, {
           position: "top-center",

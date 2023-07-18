@@ -40,7 +40,7 @@ const ServiceBooked = () => {
   useEffect(() => {
     const servicedataload = async () => {
       try {
-        const detail = (await axios.post("http://localhost:4001/service/singleService",{
+        const detail = (await axios.post("https://looks-0hws.onrender.com/service/singleService",{
             data: {
               _id: prodata.service_id,
             },
@@ -56,7 +56,7 @@ const ServiceBooked = () => {
 
   const bookservice = async () => {
     try {
-     const data =(await axios.post("http://localhost:4001/serviceBooking/booking", {
+     const data =(await axios.post("https://looks-0hws.onrender.com/serviceBooking/booking", {
           data: {
             mon: month,
             date: selectdate,

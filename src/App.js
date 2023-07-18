@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const checkuser = async () => {
       try {
-        const data = (await axios.post("http://localhost:4001/api/checkuser", {
+        const data = (await axios.post("https://looks-0hws.onrender.com/api/checkuser", {
           data: {
             _id: userid.current
           }

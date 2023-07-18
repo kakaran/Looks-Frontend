@@ -25,7 +25,7 @@ const Booked = () => {
     try {
       const productdataload = async () => {
         const data = (
-          await axios.post("http://localhost:4001/cart/cartproduct", { userid })
+          await axios.post("https://looks-0hws.onrender.com/cart/cartproduct", { userid })
         ).data;
         setCartdata(data.detail);
         setTotalprice(data.totalvalue);
@@ -39,7 +39,7 @@ const Booked = () => {
   const OrderConfirmed = async () => {
     try {
       const data = (
-        await axios.post("http://localhost:4001/orders/order", {
+        await axios.post("https://looks-0hws.onrender.com/orders/order", {
           data: {
             userId: userid,
             totalprice: totalprice + 50,
@@ -81,7 +81,7 @@ const Booked = () => {
             {cartdata.map((value, index) => {
               return (
                 <div className="productdetail" key={index}>
-                  <img src={`http://localhost:4001${value.product.image}`} alt="product" />
+                  <img src={`https://looks-0hws.onrender.com${value.product.image}`} alt="product" />
                   <p>{value.product.name}</p>
                   <p>Qty : {value.qty}</p>
                   <p>₹{value.product.price}</p>

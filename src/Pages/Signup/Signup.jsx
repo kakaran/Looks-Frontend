@@ -39,7 +39,7 @@ export default function Signup() {
         });
         console.log("hi");
     }else{
-    await axios.post("http://localhost:4001/api/Signup",user).then((response)=>{
+    await axios.post("https://looks-0hws.onrender.com/api/Signup",user).then((response)=>{
         toast.success(`${response.request.response}`, {
           position: "top-center",
           autoClose: 1000,

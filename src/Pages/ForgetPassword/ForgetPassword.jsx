@@ -28,7 +28,7 @@ export default function ForgetPassword() {
 
   
   const submitPassword = async () => {
-    const data  = await axios.post(`http://localhost:4001/api/forgetpassword/${useremail}`,user).then((res)=>{
+    const data  = await axios.post(`https://looks-0hws.onrender.com/api/forgetpassword/${useremail}`,user).then((res)=>{
       toast.success(`${res.request.response}`, {
         position: "top-center",
         autoClose: 1000,

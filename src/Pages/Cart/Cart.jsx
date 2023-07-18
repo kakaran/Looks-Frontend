@@ -25,7 +25,7 @@ const Cart = () => {
 
       const productdataload = async () => {
         const data = (
-          await axios.post("http://localhost:4001/cart/cartproduct", { userid })
+          await axios.post("https://looks-0hws.onrender.com/cart/cartproduct", { userid })
         ).data;
         setCartdata(data.detail);
         setTotalprice(data.totalvalue)
@@ -42,7 +42,7 @@ const Cart = () => {
 
   const deleteproduct = async (value) => {
     try {
-      const data = (await axios.delete(`http://localhost:4001/cart/cart`, {
+      const data = (await axios.delete(`https://looks-0hws.onrender.com/cart/cart`, {
         data: {
           id: userid.id,
           product: value
@@ -81,7 +81,7 @@ const Cart = () => {
           {cartdata.map((value, index) => {
             return (
               <div className="product" key={index}>
-                <img src={`http://localhost:4001${value.product.image}`} alt="product" />
+                <img src={`https://looks-0hws.onrender.com${value.product.image}`} alt="product" />
                 <div className="detail">
                   <div className="name">
                     <Link to={`/product/${value.product._id}`}>
